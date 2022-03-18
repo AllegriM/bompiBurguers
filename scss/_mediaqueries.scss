@@ -5,12 +5,21 @@
     .main__section{
         .banner__container{
             grid-template-columns: repeat(1, 1fr);
+            border-bottom: 1px solid #ffffff;
             .banner__left{
-                border-bottom: 1px solid #ffffff;
                 border-right: none;
-            }
-            .banner__right{
                 border-bottom: 1px solid #ffffff;
+            }
+        }
+        .info__section{
+            grid-template-columns: repeat(1, 1fr);
+            border-bottom: 1px solid #ffffff;
+            .info__left{
+                border-right: none;
+                border-bottom: 1px solid #ffffff;
+            }
+            .info__right{
+                
             }
         }   
     } 

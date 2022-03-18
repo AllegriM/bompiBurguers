@@ -99,23 +99,27 @@
         }
     }
     .about__section{
+        display: flex;
         height: 60vh;
         width: 100%;
+        gap: 2rem;
         background-color: $clr-grey-bg;
         color: $clr-main-letter-button;
         border-bottom: 1px solid black;
         .about__container{
+            height: 100%;
             @include flexCenter;
+            justify-content: space-evenly;
             margin: 0 10%;
             .about__title{
                 font-size: $h2-fs;
             }
             .about__texts{
+                width: 50%;
                 .about__texts-text{
                     
                 }
                 .about__texts-subtext{
-                    margin-top: 1em;
                 }
             }
         }
@@ -130,6 +134,7 @@
             color: $clr-yllw-font;
         }
         .suscribe__subtitles{
+            font-weight: $fw-bold;
             .suscribe__subtitle{
 
             }
@@ -140,7 +145,11 @@
                 text-align: start;
             }
             .suscribe__input{
-                margin: 0 5px   ;
+                padding: 0.3em 0.7em;
+                border-radius: .4em;
+                background-color: $clr-yllw-font;
+                font-weight: $fw-bold;
+                border: 2px solid black;
             }
             .suscribe__button{
                 background: $clr-yllw-font;
@@ -161,5 +170,63 @@
                 }
             }
         }
+    }
+    .info__section{
+        @extend .banner__container;
+        .info__left{
+            border-right: 1px solid white;
+            @include flexcenterBanners;
+            h3{
+                @include yellowTitle;
+            }
+        }
+        .info__right{
+            @include flexcenterBanners;
+            h3{
+                @include yellowTitle;
+            }
+        }
+    }
+    
+}
+.footer{
+    background-color: $clr-footer-bg;
+    text-align: center;
+    .footer__container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        text-align: center;
+        margin: 0 auto;
+        max-width: 700px;
+        border-bottom: 1px solid black;
+        .footer__left{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            text-align: start;
+            p{
+                word-wrap: break-word;
+            }
+        }
+        .footer__mid{
+            display: flex;
+            justify-content: center;
+            img{
+                height: 125px;
+                width: 155px;
+            }
+        }
+        .footer__right{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+        }
+    }
+    .footer__bottom{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
