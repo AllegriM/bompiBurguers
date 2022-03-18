@@ -1,0 +1,165 @@
+// Main index.html
+
+.header__section{
+    height: 95vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    .initial-bg{
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        opacity: 0.9;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        object-fit: cover;
+    }
+    .initial__infocenter{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        text-align: center;
+        .initial__container{
+            height: 100%;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .initial__container-logo{
+                height: 150px;
+                width: 150px;
+                .initial__container-logo-burger{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .initial__container-title{
+                width: auto;
+                .initial__container-spaitel{
+                    font-size: clamp($h3-fs, $h2-fs, $h1-fs);
+                    color: $clr-main-letter-button;
+                }
+            }
+            .initial__container-links{
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+                .initial__container-links--item{
+                    white-space: nowrap;
+                    font-size: $body-fs;
+                    margin: 1em 10px;
+                    padding: 10px 20px;
+                    background-color: $clr-main-letter-button;
+                    border-radius: 10px;
+                    border: 1px solid black;
+                    color: $clr-footer-bg;
+                    letter-spacing: 2px;
+                }
+            }
+        }
+    }
+}
+.main__section{
+    display: block;
+    height: 100%;
+    width: 100%;
+    .banner__container{
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        text-align: center;
+        .banner__left{
+            border-right: 1px solid white;
+            @include flexcenterBanners;
+            .banner__left-title{
+                @include yellowTitle;
+            }
+            .banner__left-days{
+                @include boldfontTitle;
+            }
+            .banner__left-price{
+                @include boldfontTitle
+            }
+        }
+        .banner__right{
+            @include flexcenterBanners;
+            .banner__right-title{
+                @include yellowTitle;
+            }
+            .banner__right-offers{
+                
+            }
+            .banner__right-days{
+                @include boldfontTitle;
+            }
+        }
+    }
+    .about__section{
+        height: 60vh;
+        width: 100%;
+        background-color: $clr-grey-bg;
+        color: $clr-main-letter-button;
+        border-bottom: 1px solid black;
+        .about__container{
+            @include flexCenter;
+            margin: 0 10%;
+            .about__title{
+                font-size: $h2-fs;
+            }
+            .about__texts{
+                .about__texts-text{
+                    
+                }
+                .about__texts-subtext{
+                    margin-top: 1em;
+                }
+            }
+        }
+    }
+    .suscribe__section{
+        height: 70vh;
+        @include flexCenter;
+        background-color: $clr-lightgrey-bg;
+        text-align: center;
+        .suscribe__title{
+            font-size: $h3-fs;
+            color: $clr-yllw-font;
+        }
+        .suscribe__subtitles{
+            .suscribe__subtitle{
+
+            }
+        }
+        .suscribe__form{
+            .suscribe__title-bompier{
+                font-weight: $fw-bold;
+                text-align: start;
+            }
+            .suscribe__input{
+                margin: 0 5px   ;
+            }
+            .suscribe__button{
+                background: $clr-yllw-font;
+                font-family: inherit;
+                padding: 0.3em 0.7em;
+                font-weight: 900;
+                font-size: 18px;
+                border: 3px solid black;
+                border-radius: 0.4em;
+                box-shadow: 0.1em 0.1em;
+                &:hover{
+                    transform: translate(-0.05em, -0.05em);
+                    box-shadow: 0.15em 0.15em;
+                }
+                &:active{
+                    transform: translate(0.05em, 0.05em);
+                    box-shadow: 0.05em 0.05em;
+                }
+            }
+        }
+    }
+}

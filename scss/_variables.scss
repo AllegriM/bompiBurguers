@@ -1,0 +1,66 @@
+// VARIABLES for our HAMBURGUER PAGE
+
+//=============== COLOR VARIABLES ============//
+
+// Main colors
+
+$clr-main-letter-button: #FEFAE2;
+$clr-main-black-letter: #323232;
+$clr-yllw-font: #FBCA1F;
+$clr-grey-bg: #464646;
+$clr-lightgrey-bg: #8d8d8d;
+
+// Footer Colors
+
+$clr-dark-bg: #323232;
+$clr-footer-bg: #323232;
+$clr-footer-font: #FFFFFF;
+
+//=============== FONTS ================//
+
+// Sizes //
+
+$h1-fs: 5.5rem;
+$h2-fs: 4rem;
+$h3-fs: 2.5rem;
+$body-fs: 1.25rem;
+
+// Weight //
+
+$fw-light: 300;
+$fw-normal: 400;
+$fw-semi: 500;
+$fw-bold: 700;
+
+
+
+//================= MIXINS ===================//
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+@mixin flexcenterBanners {
+    color: $clr-footer-font;
+    background-color: black;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+@mixin yellowTitle{
+    color: $clr-yllw-font;
+    font-size: $h3-fs;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+@mixin boldfontTitle {
+    font-size: $body-fs;
+    font-weight: bold;
+    letter-spacing: 2px;
+}

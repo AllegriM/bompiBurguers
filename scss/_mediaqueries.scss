@@ -1,0 +1,17 @@
+//================== MEDIA QUERIES ====================//
+
+@media screen and (max-width: 768px) {
+    
+    .main__section{
+        .banner__container{
+            grid-template-columns: repeat(1, 1fr);
+            .banner__left{
+                border-bottom: 1px solid #ffffff;
+                border-right: none;
+            }
+            .banner__right{
+                border-bottom: 1px solid #ffffff;
+            }
+        }   
+    } 
+}
