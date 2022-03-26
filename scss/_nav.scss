@@ -1,0 +1,22 @@
+
+.header{
+    height: 100%;
+    width: 100%;
+    background-color: $clr-bg-nav;
+    .nav{
+        .nav__ul{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            text-align: center;
+            .nav__item{
+                .nav__link{
+                    color: $clr-fc-nav;
+                    .nav__logo{
+
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,41 @@
+// Menu HTML
+
+.menu__main{
+    background-color: $clr-bg-main;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 100px;
+    .menu__banner{
+        width: 100%;
+        background-size: cover;
+    }
+    .menu__container-burguer{
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        justify-content: center;
+        width: 70%;
+        gap: 35px;
+        height: 100%;
+        .menu__card{
+            height: 350px;
+            width: 300px;
+            text-align: center;
+            &__card-burguer{
+
+            }
+            &__cards-title{
+
+            }
+            &__card-desc{
+
+            }
+        }
+    }
+    .menu__container-extras{
+        @extend .menu__container-burguer;
+    }
+    .menu__container-salads{
+        @extend .menu__container-burguer;
+    }
+}
