@@ -78,3 +78,14 @@ $color-accent: #fab700;
     font-weight: bold;
     letter-spacing: 2px;
 }
+
+@mixin menu__sections {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    gap: 35px;
+    height: 100%;
+}

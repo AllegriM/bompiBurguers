@@ -34,18 +34,80 @@ body {
   .menu__main .menu__banner {
     width: 100%;
     background-size: cover; }
-  .menu__main .menu__container-burguer, .menu__main .menu__container-extras, .menu__main .menu__container-salads {
-    display: flex;
-    flex-wrap: wrap;
-    margin: auto;
-    justify-content: center;
-    width: 70%;
-    gap: 35px;
-    height: 100%; }
-    .menu__main .menu__container-burguer .menu__card, .menu__main .menu__container-extras .menu__card, .menu__main .menu__container-salads .menu__card {
-      height: 350px;
-      width: 300px;
-      text-align: center; }
+  .menu__main .section__burguer {
+    padding: 5.50em 0; }
+    .menu__main .section__burguer .menu__title {
+      display: block;
+      height: 300px;
+      width: 600px;
+      margin: 0 auto; }
+    .menu__main .section__burguer .menu__burguer {
+      display: flex;
+      flex-wrap: wrap;
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+      width: 70%;
+      gap: 35px;
+      height: 100%; }
+      .menu__main .section__burguer .menu__burguer .menu__card {
+        height: 350px;
+        width: 300px;
+        text-align: center;
+        padding: 1.25em 0 1.75em 0; }
+        .menu__main .section__burguer .menu__burguer .menu__card-img {
+          height: 210px;
+          width: 250px; }
+  .menu__main .section__extras {
+    padding: 6.25em 0; }
+    .menu__main .section__extras .menu__title {
+      display: block;
+      height: 100px;
+      width: 350px;
+      margin: 0 auto; }
+    .menu__main .section__extras .menu__extras {
+      display: flex;
+      flex-wrap: wrap;
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+      width: 70%;
+      gap: 35px;
+      height: 100%; }
+      .menu__main .section__extras .menu__extras .menu__card {
+        height: 350px;
+        width: 300px;
+        text-align: center;
+        padding: 1.25em 0 1.75em 0; }
+        .menu__main .section__extras .menu__extras .menu__card-img {
+          height: 230px;
+          width: 330px;
+          background-size: cover; }
+  .menu__main .section__salads {
+    padding: 6.25em 0; }
+    .menu__main .section__salads .menu__title {
+      display: block;
+      height: 100px;
+      width: 350px;
+      margin: 0 auto; }
+    .menu__main .section__salads .menu__salads {
+      display: flex;
+      flex-wrap: wrap;
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+      width: 70%;
+      gap: 35px;
+      height: 100%; }
+      .menu__main .section__salads .menu__salads .menu__card {
+        height: 500px;
+        width: 300px;
+        text-align: center;
+        padding: 1.25em 0 1.75em 0; }
+        .menu__main .section__salads .menu__salads .menu__card-img {
+          height: 300px;
+          width: 300px;
+          background-size: cover; }
 
 .header__section {
   height: 95vh;
