@@ -1,0 +1,135 @@
+// MAIN DELIVERY //
+
+.delivery__main{
+    .delivery__menuOptions{
+        display: flex;
+        align-items: center;
+        position: sticky;
+        background-color: rgb(255, 255, 255);
+        z-index: 10;
+        top: 107px;
+        padding: .7em 1.5em;
+        margin-top: 30px;
+        overflow-x: scroll;
+        border-bottom: 1px solid $clr-lightgrey-bg;
+        border-top: 1px solid $clr-lightgrey-bg;
+        .delivery__menuOptions-title{
+            
+            h2{
+                font-size: 1rem;
+                padding-right: .8em;
+            }
+        }
+        .delivery__menuOptions-menu{
+            width: 100%;
+            .delivery__menuOptions-ul{
+                display: flex;
+                flex-direction: row;
+                .delivery__menuOptions-item{
+                    white-space: nowrap;
+                    padding: .25em .5em;
+                    margin-right: .5em;
+                    border: 1px solid $clr-dark-bg;
+                    border-radius: 15px;
+                    background-color: $clr-yllw-font;
+                    a{
+                        color: $clr-bg-nav;
+                        font-size: .75rem;
+                    }
+                }
+            }
+        }
+    }
+    .delivery__menuOrders{
+        padding: 2em 1.5em;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        &-title{
+            margin-bottom: 1em;
+            font-size: $body-big-fs;
+        }
+        &-container{
+            
+            .containerBurguers{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                &-box{
+                    min-width: 420px;
+                    max-width: 600px;
+                    width: 100%;
+                    // width: 40%;
+                    margin-bottom: 1em;
+                    margin-right: 1.5em;
+                    border: 1px solid $clr-lightgrey-bg;
+                    padding: 1em;
+                    border-radius: 20px;
+                    .containerBurguers-box-item{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        gap: 5%;
+                        margin-right: 5%;
+                        div{
+                            display: flex;
+                            justify-content: flex-start;
+                            flex-direction: column;
+                            .menu-desc{
+                                width: 100%;
+                                font-size: .8rem;
+                                line-height: 25.2px;
+                                margin-right: 0;
+                            }
+                        }
+                        .salad__img{
+                            width: 160px;
+                            height: 130px;
+                        }
+                        img{
+                            height: 125px;
+                            width: 135px;
+                            background-size: cover;
+                            object-fit: cover;
+                        }
+                        .extras{
+                            height: 125px;
+                            width: 160px;
+                        }
+                        .plus{
+                            padding: 15px;
+                            cursor:pointer;
+                            transition: all .3s ease 0s;
+                            background: #ffe581;
+                            border-radius: 50%;
+                            position: relative;
+                            margin-right: 0;
+                            display: flex;
+                            align-items: flex-end;
+                            &__liner {
+                                width: 3px;
+                                height: 15px;
+                                background: #000;
+                                border-radius: 15px;
+                                position: absolute;
+                                left: calc(53% - 2px);
+                                top: 24%;
+                            }
+                            &__linel{
+                                width: 3px;
+                                height: 15px;
+                                background: #000;
+                                border-radius: 15px;
+                                position: absolute;
+                                left: calc(53% - 2px);
+                                transform: rotate(90deg);
+                                top: 24%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

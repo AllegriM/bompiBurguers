@@ -3,6 +3,9 @@
     height: 100%;
     width: 100%;
     background-color: $clr-bg-nav;
+    position: sticky;
+    top: 0;
+    z-index: 999;
     .nav{
         .nav__ul{
             display: flex;
