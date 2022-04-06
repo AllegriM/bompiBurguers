@@ -5,6 +5,7 @@
     width: 100%;
     position: relative;
     overflow: hidden;
+    opacity: 0.9;
     .initial-bg{
         width: 100%;
         height: 100vh;
@@ -50,13 +51,18 @@
                 .initial__container-links--item{
                     white-space: nowrap;
                     font-size: $body-fs;
-                    margin: 1em 10px;
-                    padding: 10px 20px;
-                    background-color: $clr-main-letter-button;
-                    border-radius: 10px;
-                    border: 1px solid black;
-                    color: $clr-footer-bg;
+                    margin: 1em .625em;
+                    // border-radius: 10px;
                     letter-spacing: 2px;
+                    padding: .75rem 2.5rem;
+                    border: 2px solid $clr-main-letter-button;
+                    font-weight: $fw-bold;
+                    transition: 500ms ease-out;
+                    color: $clr-main-letter-button;
+                    &:hover{
+                        background-color: $clr-main-letter-button;
+                        color: $clr-bg-nav;
+                    }
                 }
             }
         }
@@ -67,34 +73,52 @@
     height: 100%;
     width: 100%;
     .banner__container{
-        height: 100%;
         width: 100%;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         text-align: center;
-        .banner__left{
-            border-right: 1px solid white;
-            @include flexcenterBanners;
-            .banner__left-title{
-                @include yellowTitle;
-            }
-            .banner__left-days{
-                @include boldfontTitle;
-            }
-            .banner__left-price{
-                @include boldfontTitle
-            }
-        }
+        align-items: center;
+        .banner__left,
         .banner__right{
+            height: 300px;
+            position: relative;
+            border-right: 1px solid $clr-main-letter-button;
             @include flexcenterBanners;
-            .banner__right-title{
-                @include yellowTitle;
+            .carrousel__content{
+                position: absolute;
+                .banner__title{
+                    @include whiteTitle;
+                }
+                i{
+                    font-size: $h3-fs;
+                }
+                .banner__btn{
+                    padding: .43rem 2.5rem;
+                    border: 2px solid $clr-main-letter-button;
+                    font-size: $sml-fs;
+                    font-weight: $fw-bold;
+                    transition: 500ms ease-out;
+                    color: $clr-main-letter-button;
+                    &:hover{
+                        background-color: $clr-main-letter-button;
+                        color: $clr-bg-nav;
+                    }
+                }
             }
-            .banner__right-offers{
-                
-            }
-            .banner__right-days{
-                @include boldfontTitle;
+            .carrouselBanner{
+                height: 100%;
+                width: 100%;
+                background-size: cover;
+                object-fit: cover;
+                position: absolute;
+                img{
+                    opacity: 0.6;
+                    height: 100%;
+                    width: 100%;
+                    display: block;
+                    background-size: cover;
+                    object-fit: cover;
+                }
             }
         }
     }
@@ -183,13 +207,13 @@
             border-right: 1px solid white;
             @include flexcenterBanners;
             h3{
-                @include yellowTitle;
+                @include whiteTitle;
             }
         }
         .info__right{
             @include flexcenterBanners;
             h3{
-                @include yellowTitle;
+                @include whiteTitle;
             }
             a{
                 white-space: nowrap;
@@ -198,7 +222,7 @@
                 padding:  .25em .5em;
                 background-color: $clr-main-letter-button;
                 border-radius: 10px;
-                border: 1px solid black;
+                border: 1px solid $clr-bg-nav;
                 color: $clr-footer-bg;
                 letter-spacing: 2px;
             }

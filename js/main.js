@@ -60,3 +60,24 @@ console.log(pedidoMenu());
 // const buyBurguer = () =>{
 
 // }
+
+// Agregar productos al Carrito.
+
+
+class Producto {
+    constructor (nombre, tipo, precio){
+        this.nombre = nombre;
+        this.tipo = tipo; 
+        this.precio = precio;
+    }
+}
+
+let carritoOrdenes = [];
+
+const addProduct = () =>{
+    let nombre = prompt("Cual es el nombre de su producto?");
+    let tipo = prompt("Que tipo de producto es?");
+    let precio = prompt("Que precio tiene su producto?");
+    const nuevoProducto = new Producto(nombre, tipo, precio);
+    carritoOrdenes.push(nuevoProducto);
+}

@@ -4,7 +4,7 @@
 
 // Main colors
 
-$clr-main-letter-button: #FEFAE2;
+$clr-main-letter-button: #ffffff;
 $clr-main-black-letter: #323232;
 $clr-yllw-font: #e9d431;
 $clr-grey-bg: #464646;
@@ -34,6 +34,8 @@ $h2-fs: 4rem;
 $h3-fs: 2.5rem;
 $body-big-fs: 1.65rem;
 $body-fs: 1.25rem;
+$md-fs: 1rem;
+$sml-fs: 0.75rem;
 
 
 // Weight //
@@ -66,8 +68,8 @@ $color-accent: #fab700;
     flex-direction: column;
 }
 
-@mixin yellowTitle{
-    color: $clr-yllw-font;
+@mixin whiteTitle{
+    color: $clr-main-letter-button;
     font-size: $h3-fs;
     font-weight: bold;
     letter-spacing: 4px;
