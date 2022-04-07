@@ -60,81 +60,180 @@ body {
           color: #000000;
           font-size: .75rem; }
 
-.delivery__main .delivery__menuOrders {
-  padding: 2em 1.5em;
+.delivery__main .delivery__cards-order {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center; }
-  .delivery__main .delivery__menuOrders-title {
-    margin-bottom: 1em;
-    font-size: 1.65rem; }
-  .delivery__main .delivery__menuOrders-container .containerBurguers {
+  align-items: baseline; }
+  .delivery__main .delivery__cards-order .delivery__menu .delivery__menuOrders {
+    padding: 2em 1.5em;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center; }
-    .delivery__main .delivery__menuOrders-container .containerBurguers-box {
-      min-width: 420px;
-      max-width: 600px;
-      width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; }
+    .delivery__main .delivery__cards-order .delivery__menu .delivery__menuOrders-title {
       margin-bottom: 1em;
-      margin-right: 1.5em;
-      border: 1px solid #8d8d8d;
-      padding: 1em;
-      border-radius: 20px; }
-      .delivery__main .delivery__menuOrders-container .containerBurguers-box .containerBurguers-box-item {
+      font-size: 1.65rem; }
+    .delivery__main .delivery__cards-order .delivery__menu .delivery__menuOrders-container .containerBurguers {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; }
+      .delivery__main .delivery__cards-order .delivery__menu .delivery__menuOrders-container .containerBurguers-box {
+        min-width: 420px;
+        max-width: 600px;
+        width: 100%;
+        margin-bottom: 1em;
+        margin-right: 1.5em;
+        border: 1px solid #8d8d8d;
+        padding: 1em;
+        border-radius: 20px; }
+        .delivery__main .delivery__cards-order .delivery__menu .delivery__menuOrders-container .containerBurguers-box .containerBurguers-box-item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 5%;
+          margin-right: 5%; }
+          .delivery__main .delivery__cards-order .delivery__menu .delivery__menuOrders-container .containerBurguers-box .containerBurguers-box-item div {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column; }
+            .delivery__main .delivery__cards-order .delivery__menu .delivery__menuOrders-container .containerBurguers-box .containerBurguers-box-item div .menu-desc {
+              width: 100%;
+              font-size: .8rem;
+              line-height: 25.2px;
+              margin-right: 0; }
+            .delivery__main .delivery__cards-order .delivery__menu .delivery__menuOrders-container .containerBurguers-box .containerBurguers-box-item div .delivery__price {
+              margin-top: .5em;
+              font-weight: 700; }
+          .delivery__main .delivery__cards-order .delivery__menu .delivery__menuOrders-container .containerBurguers-box .containerBurguers-box-item .salad__img {
+            width: 160px;
+            height: 130px; }
+          .delivery__main .delivery__cards-order .delivery__menu .delivery__menuOrders-container .containerBurguers-box .containerBurguers-box-item img {
+            height: 125px;
+            width: 135px;
+            object-fit: cover; }
+          .delivery__main .delivery__cards-order .delivery__menu .delivery__menuOrders-container .containerBurguers-box .containerBurguers-box-item .extras {
+            height: 130px;
+            width: 160px; }
+          .delivery__main .delivery__cards-order .delivery__menu .delivery__menuOrders-container .containerBurguers-box .containerBurguers-box-item .plus {
+            padding: 15px;
+            cursor: pointer;
+            transition: all .3s ease 0s;
+            background: #e9d431;
+            border-radius: 50%;
+            position: relative;
+            margin-right: 0;
+            display: flex;
+            align-items: flex-end; }
+            .delivery__main .delivery__cards-order .delivery__menu .delivery__menuOrders-container .containerBurguers-box .containerBurguers-box-item .plus__liner {
+              width: 3px;
+              height: 15px;
+              background: #000;
+              border-radius: 15px;
+              position: absolute;
+              left: calc(53% - 2.5px);
+              top: 24%; }
+            .delivery__main .delivery__cards-order .delivery__menu .delivery__menuOrders-container .containerBurguers-box .containerBurguers-box-item .plus__linel {
+              width: 3px;
+              height: 15px;
+              background: #000;
+              border-radius: 15px;
+              position: absolute;
+              left: calc(53% - 2.5px);
+              transform: rotate(90deg);
+              top: 24%; }
+  .delivery__main .delivery__cards-order .orders__section {
+    margin-right: 3em;
+    border: 1px solid #8d8d8d; }
+    .delivery__main .delivery__cards-order .orders__section .orderCart__container-add__item {
+      padding: .625em .9375em; }
+    .delivery__main .delivery__cards-order .orders__section .orderCart__container-prices {
+      padding: .625em .9375em;
+      border-bottom: 1px solid #8d8d8d; }
+      .delivery__main .delivery__cards-order .orders__section .orderCart__container-prices ul li {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 5%;
-        margin-right: 5%; }
-        .delivery__main .delivery__menuOrders-container .containerBurguers-box .containerBurguers-box-item div {
-          display: flex;
-          justify-content: flex-start;
-          flex-direction: column; }
-          .delivery__main .delivery__menuOrders-container .containerBurguers-box .containerBurguers-box-item div .menu-desc {
-            width: 100%;
-            font-size: .8rem;
-            line-height: 25.2px;
-            margin-right: 0; }
-        .delivery__main .delivery__menuOrders-container .containerBurguers-box .containerBurguers-box-item .salad__img {
-          width: 160px;
-          height: 130px; }
-        .delivery__main .delivery__menuOrders-container .containerBurguers-box .containerBurguers-box-item img {
-          height: 125px;
-          width: 135px;
-          background-size: cover;
-          object-fit: cover; }
-        .delivery__main .delivery__menuOrders-container .containerBurguers-box .containerBurguers-box-item .extras {
-          height: 125px;
-          width: 160px; }
-        .delivery__main .delivery__menuOrders-container .containerBurguers-box .containerBurguers-box-item .plus {
-          padding: 15px;
-          cursor: pointer;
-          transition: all .3s ease 0s;
-          background: #ffe581;
-          border-radius: 50%;
-          position: relative;
-          margin-right: 0;
-          display: flex;
-          align-items: flex-end; }
-          .delivery__main .delivery__menuOrders-container .containerBurguers-box .containerBurguers-box-item .plus__liner {
-            width: 3px;
-            height: 15px;
-            background: #000;
-            border-radius: 15px;
+        align-items: center; }
+        .delivery__main .delivery__cards-order .orders__section .orderCart__container-prices ul li h6 {
+          color: #8d8d8d;
+          flex-grow: 1;
+          line-height: 2.2; }
+        .delivery__main .delivery__cards-order .orders__section .orderCart__container-prices ul li span {
+          color: #323232;
+          font-weight: 700; }
+      .delivery__main .delivery__cards-order .orders__section .orderCart__container-prices ul .li__total {
+        padding-top: 1.25em; }
+        .delivery__main .delivery__cards-order .orders__section .orderCart__container-prices ul .li__total h4 {
+          font-size: 1.2rem;
+          flex-grow: 1; }
+    .delivery__main .delivery__cards-order .orders__section .orderCart__container-discount {
+      padding: .625em .9375em;
+      border-bottom: 1px solid #8d8d8d; }
+      .delivery__main .delivery__cards-order .orders__section .orderCart__container-discount ul .disccount__btn {
+        display: flex;
+        align-items: center; }
+        .delivery__main .delivery__cards-order .orders__section .orderCart__container-discount ul .disccount__btn-container {
+          position: relative; }
+          .delivery__main .delivery__cards-order .orders__section .orderCart__container-discount ul .disccount__btn-container input {
+            letter-spacing: .2px;
+            padding: .625em 4.5em .625em .9375em;
+            font-size: 1rem;
+            font-weight: 400;
+            height: 45px; }
+          .delivery__main .delivery__cards-order .orders__section .orderCart__container-discount ul .disccount__btn-container button {
             position: absolute;
-            left: calc(53% - 2px);
-            top: 24%; }
-          .delivery__main .delivery__menuOrders-container .containerBurguers-box .containerBurguers-box-item .plus__linel {
-            width: 3px;
-            height: 15px;
-            background: #000;
-            border-radius: 15px;
-            position: absolute;
-            left: calc(53% - 2px);
-            transform: rotate(90deg);
-            top: 24%; }
+            top: 1px;
+            right: 1px;
+            padding: 0 10px;
+            background: #fff;
+            color: #0b2135;
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: .2px;
+            border: none;
+            outline: none;
+            border-radius: 2px;
+            text-transform: none;
+            height: 43px;
+            cursor: pointer; }
+            .delivery__main .delivery__cards-order .orders__section .orderCart__container-discount ul .disccount__btn-container button::after {
+              content: '';
+              border-bottom: 1px solid #fd4f57;
+              display: block;
+              height: 1px; }
+      .delivery__main .delivery__cards-order .orders__section .orderCart__container-discount ul .disccount__text label {
+        color: #0b2135;
+        letter-spacing: 1px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        line-height: 1.1; }
+    .delivery__main .delivery__cards-order .orders__section .orderCart__container-aclarations {
+      margin-bottom: .625em;
+      position: relative;
+      border-top: none;
+      padding: .625em .9375em;
+      border-bottom: 1px solid #8d8d8d; }
+      .delivery__main .delivery__cards-order .orders__section .orderCart__container-aclarations h5 {
+        color: #fd4f57;
+        margin: .625em 0;
+        letter-spacing: 1px;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: .75rem;
+        line-height: 1.1; }
+      .delivery__main .delivery__cards-order .orders__section .orderCart__container-aclarations textarea {
+        background: #f9f9f9;
+        border: 1px solid #e9e9e9;
+        color: #0b2135;
+        font-size: 16px;
+        font-style: italic;
+        outline: 0;
+        padding: 22px;
+        resize: none;
+        height: 100px;
+        width: 100%;
+        overflow: auto;
+        margin: 0; }
+    .delivery__main .delivery__cards-order .orders__section .orderCart__container-orderbtn {
+      display: none;
+      padding: .625em .9375em; }
 
 .menu__main {
   background-color: #e9d431;
