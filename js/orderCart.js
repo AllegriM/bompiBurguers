@@ -90,7 +90,7 @@ const addQuantity = () => {
     if (confirm`!Añadido correctamente! Queres agregar otro producto?\n\n En caso que quiera terminar de comprar y ver su factura aprete 'Cancel'` === true) {
         addQuantity();
     } else {
-        alert("Ahora podras ver tus productos añadidos al carrito en consola");
+        alert("Ahora podras ver tus productos añadidos al carrito en consola escribiendo: 'orderCart'");
     }
 }
 
