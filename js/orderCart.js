@@ -100,7 +100,7 @@ const addQuantity = () => {
     }
 }
 
-// addQuantity();
+addQuantity();
 
 const addExtra = () => {
     customerOrder = parseInt(prompt(`Bienvenido a Bompi Burger! Seleccione la hamburguesa que le gustaria consumir: \n\n\n1: ${orderStock[0].name} \n2: ${orderStock[1].name} \n3: ${orderStock[2].name} \n4: ${orderStock[3].name}`));
