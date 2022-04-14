@@ -38,7 +38,6 @@ body {
   top: 107px;
   padding: .7em 1.5em;
   margin-top: 30px;
-  overflow-x: scroll;
   border-bottom: 1px solid #8d8d8d;
   border-top: 1px solid #8d8d8d; }
   .delivery__main .delivery__menuOptions .delivery__menuOptions-title h2 {
@@ -77,7 +76,7 @@ body {
       flex-wrap: wrap;
       justify-content: center; }
       .delivery__main .delivery__cards-order .delivery__menu .delivery__menuOrders-container .containerBurguers-box {
-        min-width: 420px;
+        min-width: 400px;
         max-width: 600px;
         width: 100%;
         margin-bottom: 1em;
@@ -390,7 +389,6 @@ body {
     .main__section .info__section .banner__right {
       height: 300px;
       position: relative;
-      border-right: 1px solid #ffffff;
       color: #FFFFFF;
       background-color: black;
       display: flex;
@@ -446,109 +444,139 @@ body {
   .main__section .about__section {
     display: flex;
     height: auto;
+    position: relative;
     padding: 1em 0;
     width: 100%;
+    height: 300px;
     gap: 2rem;
-    background-color: #464646;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #000000;
     border-bottom: 1px solid black; }
     .main__section .about__section .about__container {
       height: 100%;
+      width: 810px;
       display: flex;
-      justify-content: space-around;
       align-items: center;
       flex-direction: column;
-      justify-content: space-evenly;
       max-width: 70ch;
       overflow-wrap: break-word;
-      margin: 0em auto 0em auto; }
+      margin: 0 auto; }
       .main__section .about__section .about__container .about__title {
-        font-size: 4rem; }
-      .main__section .about__section .about__container .about__texts .about__texts-subtext {
-        margin-top: 10px; }
+        font-size: 2.5rem;
+        margin: 0 0 70px;
+        position: relative; }
+        .main__section .about__section .about__container .about__title::after {
+          content: "";
+          top: 150%;
+          left: 30%;
+          position: absolute;
+          height: 2px;
+          background-color: #323232;
+          width: 50px; }
+      .main__section .about__section .about__container .about__texts {
+        font-size: 0.875rem;
+        padding: 0 17%; }
   .main__section .suscribe__section {
-    height: 70vh;
+    height: 500px;
+    background-color: #ffffff;
+    position: relative;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    background-color: #8d8d8d;
     text-align: center; }
-    .main__section .suscribe__section .suscribe__title {
-      font-size: 2.5rem;
-      color: #e9d431; }
-    .main__section .suscribe__section .suscribe__subtitles {
-      font-weight: 700;
-      word-wrap: normal; }
-    .main__section .suscribe__section .suscribe__form {
-      display: block; }
-      .main__section .suscribe__section .suscribe__form .suscribe__title-bompier {
+    .main__section .suscribe__section .suscribe__section-img {
+      position: relative;
+      width: 100%;
+      height: 100%; }
+      .main__section .suscribe__section .suscribe__section-img img {
+        opacity: 0.9;
+        height: 100%;
+        width: 100%;
+        display: block;
+        background-size: cover;
+        object-fit: cover; }
+    .main__section .suscribe__section .suscribe__section-content {
+      height: 50%;
+      position: absolute;
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column; }
+      .main__section .suscribe__section .suscribe__section-content .suscribe__title {
+        font-size: 2.5rem;
+        color: #e9d431; }
+      .main__section .suscribe__section .suscribe__section-content .suscribe__subtitles {
         font-weight: 700;
-        text-align: start; }
-      .main__section .suscribe__section .suscribe__form .suscribe__input {
-        padding: 0.3em 0.7em;
-        border-radius: .4em;
-        background-color: #e9d431;
+        word-wrap: normal; }
+        .main__section .suscribe__section .suscribe__section-content .suscribe__subtitles .suscribe__subtitle {
+          color: #ffffff; }
+      .main__section .suscribe__section .suscribe__section-content .suscribe__form {
+        display: block; }
+        .main__section .suscribe__section .suscribe__section-content .suscribe__form .suscribe__title-bompier {
+          font-weight: 700;
+          text-align: start; }
+        .main__section .suscribe__section .suscribe__section-content .suscribe__form .suscribe__input {
+          padding: 0.3em 0.7em;
+          border-radius: .4em;
+          background-color: #e9d431;
+          font-weight: 700;
+          border: 2px solid black; }
+        .main__section .suscribe__section .suscribe__section-content .suscribe__form .suscribe__button {
+          background: #e9d431;
+          font-family: inherit;
+          padding: 0.3em 0.7em;
+          font-weight: 900;
+          font-size: 18px;
+          border: 3px solid black;
+          border-radius: 0.4em;
+          box-shadow: 0.1em 0.1em;
+          margin-top: .5em; }
+          .main__section .suscribe__section .suscribe__section-content .suscribe__form .suscribe__button:hover {
+            transform: translate(-0.05em, -0.05em);
+            box-shadow: 0.15em 0.15em; }
+          .main__section .suscribe__section .suscribe__section-content .suscribe__form .suscribe__button:active {
+            transform: translate(0.05em, 0.05em);
+            box-shadow: 0.05em 0.05em; }
+  .main__section .info__section {
+    height: 300px;
+    position: relative; }
+    .main__section .info__section .info__left,
+    .main__section .info__section .info__right {
+      height: 100%;
+      padding: 2em 0;
+      border-bottom: 1px solid #ffffff;
+      color: #FFFFFF;
+      background-color: black;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-direction: column; }
+      .main__section .info__section .info__left h3,
+      .main__section .info__section .info__right h3 {
+        color: #ffffff;
+        font-size: 2.5rem;
+        font-weight: bold;
+        letter-spacing: 4px; }
+      .main__section .info__section .info__left a,
+      .main__section .info__section .info__right a {
+        margin-top: 1em;
+        padding: .43rem 2.5rem;
+        border: 2px solid #ffffff;
+        font-size: 0.75rem;
         font-weight: 700;
-        border: 2px solid black; }
-      .main__section .suscribe__section .suscribe__form .suscribe__button {
-        background: #e9d431;
-        font-family: inherit;
-        padding: 0.3em 0.7em;
-        font-weight: 900;
-        font-size: 18px;
-        border: 3px solid black;
-        border-radius: 0.4em;
-        box-shadow: 0.1em 0.1em; }
-        .main__section .suscribe__section .suscribe__form .suscribe__button:hover {
-          transform: translate(-0.05em, -0.05em);
-          box-shadow: 0.15em 0.15em; }
-        .main__section .suscribe__section .suscribe__form .suscribe__button:active {
-          transform: translate(0.05em, 0.05em);
-          box-shadow: 0.05em 0.05em; }
-  .main__section .info__section .info__left {
-    border-right: 1px solid white;
-    color: #FFFFFF;
-    background-color: black;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: column; }
-    .main__section .info__section .info__left h3 {
-      color: #ffffff;
-      font-size: 2.5rem;
-      font-weight: bold;
-      letter-spacing: 4px; }
-  .main__section .info__section .info__right {
-    color: #FFFFFF;
-    background-color: black;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: column; }
-    .main__section .info__section .info__right h3 {
-      color: #ffffff;
-      font-size: 2.5rem;
-      font-weight: bold;
-      letter-spacing: 4px; }
-    .main__section .info__section .info__right a {
-      white-space: nowrap;
-      font-size: 1rem;
-      margin: .5em .315em;
-      padding: .25em .5em;
-      background-color: #ffffff;
-      border-radius: 10px;
-      border: 1px solid #000000;
-      color: #323232;
-      letter-spacing: 2px; }
+        transition: 500ms ease-out;
+        color: #ffffff; }
+        .main__section .info__section .info__left a:hover,
+        .main__section .info__section .info__right a:hover {
+          background-color: #ffffff;
+          color: #000000; }
 
 .footer {
   background-color: #000000;
   text-align: center;
   height: 100%;
   color: #FFFFFF;
-  padding: 2em 0;
-  font-family: 'Verdana', serif; }
+  padding: 2em 0; }
   .footer .footer__container .footer__center {
     text-align: center; }
     .footer .footer__container .footer__center .footer__mid-logo {
@@ -577,19 +605,25 @@ body {
           font-size: 1.5rem;
           color: #FFFFFF; }
 
+@media screen and (max-width: 1024px) {
+  .orders__section {
+    display: none; } }
+
 @media screen and (max-width: 768px) {
+  .delivery__main .delivery__menuOptions {
+    overflow-x: scroll; }
+  .header__section .initial__infocenter .initial__container .initial__container-title .initial__container-spaitel {
+    font-size: clamp(2.5rem, 4rem, 2.5rem); }
+  .header__section .initial__infocenter .initial__container .initial__container-links .initial__container-links--item {
+    font-size: 1rem; }
+  .about__section .about__container .about__texts .about__texts-text {
+    padding: 0; }
   .menu__main .section__burguer .menu__title {
     width: 400px;
     height: 200px; }
   .main__section .banner__container, .main__section .info__section {
-    grid-template-columns: repeat(1, 1fr);
-    border-bottom: 1px solid #ffffff; }
-    .main__section .banner__container .banner__left, .main__section .info__section .banner__left {
-      border-right: none;
-      border-bottom: 1px solid #ffffff; }
+    grid-template-columns: repeat(1, 1fr); }
   .main__section .info__section {
-    grid-template-columns: repeat(1, 1fr);
-    border-bottom: 1px solid #ffffff; }
-    .main__section .info__section .info__left {
-      border-right: none;
-      border-bottom: 1px solid #ffffff; } }
+    grid-template-columns: repeat(1, 1fr); }
+  footer {
+    margin-top: 6.25em; } }

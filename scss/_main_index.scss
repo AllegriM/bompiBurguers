@@ -82,7 +82,6 @@
         .banner__right{
             height: 300px;
             position: relative;
-            border-right: 1px solid $clr-main-letter-button;
             @include flexcenterBanners;
             .carrousel__content{
                 position: absolute;
@@ -125,106 +124,139 @@
     .about__section{
         display: flex;
         height: auto;
+        position: relative;
         padding: 1em 0;
         width: 100%;
+        height: 300px;
         gap: 2rem;
-        background-color: $clr-grey-bg;
-        color: $clr-main-letter-button;
+        background-color: $clr-main-letter-button;
+        color: $clr-bg-nav;
         border-bottom: 1px solid black;
-        
         .about__container{
             height: 100%;
+            width: 810px;
             display: flex;
-            justify-content: space-around;
             align-items: center;
             flex-direction: column;
-            justify-content: space-evenly;
             max-width: 70ch;
             overflow-wrap: break-word;
-            margin: 0em auto 0em auto;
+            margin: 0 auto;
             .about__title{
-                font-size: $h2-fs;
+                font-size: $h3-fs;
+                margin: 0 0 70px;
+                position: relative;
+                &::after{
+                    content: "";
+                    top: 150%;
+                    left: 30%;
+                    position: absolute;
+                    height: 2px;
+                    background-color: $clr-dark-bg;
+                    width: 50px;
+                }
             }
             .about__texts{
-                .about__texts-subtext{
-                    margin-top: 10px;
-                }
+                font-size: $smd-fs;
+                padding: 0 17%;
             }
         }
     }
     .suscribe__section{
-        height: 70vh;
+        height: 500px;
+        background-color: $clr-main-letter-button;
+        position: relative;
         @include flexCenter;
-        background-color: $clr-lightgrey-bg;
         text-align: center;
-        .suscribe__title{
-            font-size: $h3-fs;
-            color: $clr-yllw-font;
-        }
-        .suscribe__subtitles{
-            font-weight: $fw-bold;
-            word-wrap: normal;
-            .suscribe__subtitle{
-
+        .suscribe__section-img{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            img{
+                opacity: 0.9;
+                height: 100%;
+                width: 100%;
+                display: block;
+                background-size: cover;
+                object-fit: cover;
             }
         }
-        .suscribe__form{
-            display: block;
-            .suscribe__title-bompier{
-                font-weight: $fw-bold;
-                text-align: start;
+        .suscribe__section-content{
+            height: 50%;
+            position: absolute;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            .suscribe__title{
+                font-size: $h3-fs;
+                color: $clr-yllw-font;
             }
-            .suscribe__input{
-                padding: 0.3em 0.7em;
-                border-radius: .4em;
-                background-color: $clr-yllw-font;
+            .suscribe__subtitles{
                 font-weight: $fw-bold;
-                border: 2px solid black;
-            }
-            .suscribe__button{
-                background: $clr-yllw-font;
-                font-family: inherit;
-                padding: 0.3em 0.7em;
-                font-weight: 900;
-                font-size: 18px;
-                border: 3px solid black;
-                border-radius: 0.4em;
-                box-shadow: 0.1em 0.1em;
-                &:hover{
-                    transform: translate(-0.05em, -0.05em);
-                    box-shadow: 0.15em 0.15em;
+                word-wrap: normal;
+                .suscribe__subtitle{
+                    color: $clr-main-letter-button;
                 }
-                &:active{
-                    transform: translate(0.05em, 0.05em);
-                    box-shadow: 0.05em 0.05em;
+            }
+            .suscribe__form{
+                display: block;
+                .suscribe__title-bompier{
+                    font-weight: $fw-bold;
+                    text-align: start;
+                }
+                .suscribe__input{
+                    padding: 0.3em 0.7em;
+                    border-radius: .4em;
+                    background-color: $clr-yllw-font;
+                    font-weight: $fw-bold;
+                    border: 2px solid black;
+                }
+                .suscribe__button{
+                    background: $clr-yllw-font;
+                    font-family: inherit;
+                    padding: 0.3em 0.7em;
+                    font-weight: 900;
+                    font-size: 18px;
+                    border: 3px solid black;
+                    border-radius: 0.4em;
+                    box-shadow: 0.1em 0.1em;
+                    margin-top: .5em;
+                    &:hover{
+                        transform: translate(-0.05em, -0.05em);
+                        box-shadow: 0.15em 0.15em;
+                    }
+                    &:active{
+                        transform: translate(0.05em, 0.05em);
+                        box-shadow: 0.05em 0.05em;
+                    }
                 }
             }
         }
     }
     .info__section{
+        height: 300px;
+        position: relative;
         @extend .banner__container;
-        .info__left{
-            border-right: 1px solid white;
-            @include flexcenterBanners;
-            h3{
-                @include whiteTitle;
-            }
-        }
+        .info__left,
         .info__right{
+            height: 100%;
+            padding: 2em 0;
+            border-bottom: 1px solid $clr-main-letter-button;
             @include flexcenterBanners;
             h3{
                 @include whiteTitle;
             }
             a{
-                white-space: nowrap;
-                font-size: 1rem;
-                margin: .5em .315em;
-                padding:  .25em .5em;
-                background-color: $clr-main-letter-button;
-                border-radius: 10px;
-                border: 1px solid $clr-bg-nav;
-                color: $clr-footer-bg;
-                letter-spacing: 2px;
+                margin-top: 1em;
+                padding: .43rem 2.5rem;
+                border: 2px solid $clr-main-letter-button;
+                font-size: $sml-fs;
+                font-weight: $fw-bold;
+                transition: 500ms ease-out;
+                color: $clr-main-letter-button;
+                &:hover{
+                    background-color: $clr-main-letter-button;
+                    color: $clr-bg-nav;
+                }
             }
         }
     }

@@ -8,6 +8,7 @@ class Producto {
         this.name = name.toUpperCase();
         this.type = type.toUpperCase();
         this.price = parseInt(price);
+        // this.stock = parseInt(stock);
     }
     cuponDescuento() {
         if (this.price > 3000) {
@@ -51,14 +52,19 @@ const budweis = new Producto(21, "BUDWEISER", "BEBIDAS C/ALC", 260);
 const heineken = new Producto(22, "HEINEKEN", "BEBIDAS C/ALC", 350);
 const corona = new Producto(23, "CORONA", "BEBIDAS C/ALC", 260);
 const brahma = new Producto(24, "BRAHMA", "BEBIDAS C/ALC", 250);
-
+// cupon de descuento
+const cupon = "A34B2J6UI";
 
 
 //********* Variables *********//
 
 let orderCart = [];
 //============================== 0 ===============================================  1  ============================== 2 =========================  3  =============================  4  ================== // 
-let orderStock = [neuquen, cordoba, mendoza, santaFe];
+const orderStock = [neuquen, cordoba, mendoza, santaFe,
+    laRioja, santaCruz, jujuy, sanJuan,
+    buenosAires, corrientes, papasComunes, papasCheddar,
+    chickenDice, OnionRing, caesar, reySol,
+    coca, cocaZero, agua, pasoToros, budweis, heineken, corona, brahma];
 
 let customerOrder;
 let quantity;
@@ -94,12 +100,33 @@ const addQuantity = () => {
     }
 }
 
-addQuantity();
+// addQuantity();
 
-// const addExtra = () => {
-//     customerOrder = parseInt(prompt(`Bienvenido a Bompi Burger! Seleccione la hamburguesa que le gustaria consumir: \n\n\n1: ${orderStock[0].name} \n2: ${orderStock[1].name} \n3: ${orderStock[2].name} \n4: ${orderStock[3].name}`));
-//     if (customerOrder >= 5 || customerOrder <= 0) {
-//         alert("Escoja un valor correcto de la lista anterior")
-//         addHamburguer();
-//     }
-// }
+const addExtra = () => {
+    customerOrder = parseInt(prompt(`Bienvenido a Bompi Burger! Seleccione la hamburguesa que le gustaria consumir: \n\n\n1: ${orderStock[0].name} \n2: ${orderStock[1].name} \n3: ${orderStock[2].name} \n4: ${orderStock[3].name}`));
+    if (customerOrder >= 5 || customerOrder <= 0) {
+        alert("Escoja un valor correcto de la lista anterior")
+        addHamburguer();
+    }
+}
+
+
+// Filter categories
+
+
+let searchMenu = prompt("Que producto te gustaria ver del menu?? \n OPTIONS: \n HAMBURGUESA \n EXTRAS \n ENSALADAS \n BEBIDAS S/ALC \n BEBIDAS C/ALC ").toUpperCase();
+while (searchMenu != "HAMBURGUESA" &&  searchMenu != "EXTRAS" && searchMenu != "ENSALADAS" && searchMenu != "BEBIDAS S/ALC" && searchMenu != "BEBIDAS C/ALC" ){
+    alert("Opcion incorrecta, seleccione una opcion valida")
+    searchMenu = prompt("Que producto te gustaria ver del menu?? \n OPTIONS: \n HAMBURGUESA \n EXTRAS \n ENSALADAS \n BEBIDAS S/ALC \n BEBIDAS C/ALC ").toUpperCase();
+}
+console.log(searchMenu)
+const filterProd = orderStock.filter( (prod) => prod.type.includes(searchMenu));
+// const filterExt = orderStock.filter( (prod) => prod.type.includes("EXTRAS"));
+// const filterSalad = orderStock.filter( (prod) => prod.type.includes("ENSALADAS"));
+// const filterBebSinAlc = orderStock.filter( (prod) => prod.type.includes("BEBIDAS S/ALC"));
+// const filterBebConnAlc = orderStock.filter( (prod) => prod.type.includes("BEBIDAS C/ALC"));
+console.log(filterProd);
+// console.log(filterExt);
+// console.log(filterSalad);
+// console.log(filterBebSinAlc);
+// console.log(filterBebConnAlc);

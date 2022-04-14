@@ -1,11 +1,46 @@
 //================== MEDIA QUERIES ====================//
 
-@media screen and (max-width: 768px){
-
+@media screen and (max-width: 1024px){
+    .orders__section{
+        display: none;
+    }
 }
 
 
 @media screen and (max-width: 768px) {
+    //delivery overscroll x
+    .delivery__main{
+        .delivery__menuOptions{
+            overflow-x: scroll;
+        }
+    }
+    // Index video section
+    .header__section{
+        .initial__infocenter{
+            .initial__container{
+                .initial__container-title{
+                    .initial__container-spaitel{
+                        font-size: clamp($h3-fs, $h2-fs, $h3-fs);
+                    }
+                }
+                .initial__container-links{
+                    .initial__container-links--item{
+                        font-size: $md-fs;
+                    }
+                }
+            }
+        }
+    }
+    // About section
+    .about__section{
+        .about__container{
+            .about__texts{
+                .about__texts-text{
+                    padding: 0;
+                }
+            }
+        }
+    }
     // Menu title smaller
     .menu__main{
         .section__burguer{
@@ -19,23 +54,24 @@
     .main__section{
         .banner__container{
             grid-template-columns: repeat(1, 1fr);
-            border-bottom: 1px solid #ffffff;
             .banner__left{
-                border-right: none;
-                border-bottom: 1px solid #ffffff;
             }
         }
         .info__section{
             grid-template-columns: repeat(1, 1fr);
-            border-bottom: 1px solid #ffffff;
             .info__left{
-                border-right: none;
-                border-bottom: 1px solid #ffffff;
             }
             .info__right{
                 
             }
         }
+    }
+    // Suscribe section of index
+    .suscribe__section{
 
+    }
+    // Footer 
+    footer{
+        margin-top: 6.25em;
     }
 }
