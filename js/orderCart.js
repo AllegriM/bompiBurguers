@@ -100,7 +100,7 @@ const addQuantity = () => {
     }
 }
 
-addQuantity();
+// addQuantity();
 
 const addExtra = () => {
     customerOrder = parseInt(prompt(`Bienvenido a Bompi Burger! Seleccione la hamburguesa que le gustaria consumir: \n\n\n1: ${orderStock[0].name} \n2: ${orderStock[1].name} \n3: ${orderStock[2].name} \n4: ${orderStock[3].name}`));
@@ -111,22 +111,110 @@ const addExtra = () => {
 }
 
 
-// Filter categories
+//************************** Filter categories ***********************//
 
 
-let searchMenu = prompt("Que producto te gustaria ver del menu?? \n OPTIONS: \n HAMBURGUESA \n EXTRAS \n ENSALADAS \n BEBIDAS S/ALC \n BEBIDAS C/ALC ").toUpperCase();
-while (searchMenu != "HAMBURGUESA" &&  searchMenu != "EXTRAS" && searchMenu != "ENSALADAS" && searchMenu != "BEBIDAS S/ALC" && searchMenu != "BEBIDAS C/ALC" ){
-    alert("Opcion incorrecta, seleccione una opcion valida")
-    searchMenu = prompt("Que producto te gustaria ver del menu?? \n OPTIONS: \n HAMBURGUESA \n EXTRAS \n ENSALADAS \n BEBIDAS S/ALC \n BEBIDAS C/ALC ").toUpperCase();
+// let searchMenu = prompt("Que producto te gustaria ver del menu?? \n OPTIONS: \n HAMBURGUESA \n EXTRAS \n ENSALADAS \n BEBIDAS S/ALC \n BEBIDAS C/ALC ").toUpperCase();
+// while (searchMenu != "HAMBURGUESA" &&  searchMenu != "EXTRAS" && searchMenu != "ENSALADAS" && searchMenu != "BEBIDAS S/ALC" && searchMenu != "BEBIDAS C/ALC" ){
+//     alert("Opcion incorrecta, seleccione una opcion valida")
+//     searchMenu = prompt("Que producto te gustaria ver del menu?? \n OPTIONS: \n HAMBURGUESA \n EXTRAS \n ENSALADAS \n BEBIDAS S/ALC \n BEBIDAS C/ALC ").toUpperCase();
+// }
+// console.log(searchMenu)
+// const filterProd = orderStock.filter( (prod) => prod.type.includes(searchMenu));
+// console.log(filterProd);
+
+
+//************************** Button to add to cart ***********************//
+
+    // let orderItem = document.createElement("div");
+    // orderItem.innerHTML = "Soy un ITEM!";
+    // document.cartContainer.append(orderItem)
+
+if (document.readyState == "loading"){
+    document.addEventListener("DOMContentLoaded", ready);
+}else{
+    ready();
 }
-console.log(searchMenu)
-const filterProd = orderStock.filter( (prod) => prod.type.includes(searchMenu));
-// const filterExt = orderStock.filter( (prod) => prod.type.includes("EXTRAS"));
-// const filterSalad = orderStock.filter( (prod) => prod.type.includes("ENSALADAS"));
-// const filterBebSinAlc = orderStock.filter( (prod) => prod.type.includes("BEBIDAS S/ALC"));
-// const filterBebConnAlc = orderStock.filter( (prod) => prod.type.includes("BEBIDAS C/ALC"));
-console.log(filterProd);
-// console.log(filterExt);
-// console.log(filterSalad);
-// console.log(filterBebSinAlc);
-// console.log(filterBebConnAlc);
+
+function ready() {
+    let addItemBtn = document.getElementsByClassName("plus");
+    for (let i = 0; i < addItemBtn.length; i++) {
+        let button = addItemBtn[i];   
+        button.addEventListener("click", addToCartBtn)
+    }
+    let deleteItem = document.getElementsByClassName("cart_item_remove");
+    for (let i = 0; i < deleteItem.length; i++) {
+        let button = deleteItem[i];
+        button.addEventListener("click", removeCartItem)
+    }
+}
+
+function addToCartBtn(event){
+    let button = event.target
+    let shopItem = button.parentElement;
+    let menuInfo = shopItem.children[1];
+    let title = menuInfo.getElementsByClassName("menu_title")[0].innerText;
+    let price = menuInfo.getElementsByClassName("delivery_price")[0].innerText;
+    addItemToCart(title, price);
+    totalValue();
+}
+
+function addItemToCart(title, price){
+    let cartRow = document.createElement('li');
+    let cartContainer = document.getElementById("cart__ul");
+    // let cartItemNames = cartItem.getElementsByClassName("cart_item_value");
+    // let cartItemQt = cartItem.getElementsByClassName("cart_item_quantity");
+    // for (let i = 0; i < cartContainer.length; i++) {
+    //     if (cartItemNames[i].innerText == title) {
+    //         cartItemQt++;
+    //         return;
+    //     }
+    // }
+    let cartRowContent = `                            
+        <li class="cart_item">
+            <div class="cart_item_quantity">1x</div>
+            <div class="cart_item_description">${title}</div>
+            <div class="cart_item_value">${price}</div>
+            <div class="cart_item_remove"><i class="fa-solid fa-xmark"></i></div>
+        </li>
+    `
+    cartRow.innerHTML = cartRowContent
+    cartContainer.append(cartRow);
+    cartRow.getElementsByClassName("cart_item_remove")[0].addEventListener("click", removeCartItem);
+}
+
+function totalValue(){
+    // console.log(allItems)
+    let item = document.getElementsByClassName("cart_item");
+    // console.log(item)
+    let total = 0;
+    for (let i = 0; i < item.length; i++) {
+        let order = item[i];
+        // console.log(order);
+        let itemPrice = parseInt(order.getElementsByClassName("cart_item_value")[0].innerText.replace("$", ""));
+        // console.log(itemPrice);
+        total += itemPrice;
+    }
+    document.getElementsByClassName("price_subtotal")[0].innerText = "$" + total;
+    document.getElementsByClassName("price_total")[0].innerText = "$" + total;
+}
+
+function removeCartItem(event){
+    let buttonClicked = event.target;
+    buttonClicked.parentElement.parentElement.remove();
+    updateCartTotal()
+}
+
+function updateCartTotal(){
+    let cartItemContainer = document.getElementById("cart__ul");
+    let cartItems = cartItemContainer.getElementsByClassName("cart_item");
+    let total = 0;
+    for (let i = 0; i < cartItems.length; i++) {
+        let  cartItem = cartItems[i];
+        let cartPrice = cartItem.getElementsByClassName("cart_item_value")[0];
+        let price = parseInt(cartPrice.innerText.replace("$", ""))
+        total += price;
+    }
+    document.getElementsByClassName("price_total")[0].innerText = "$" + total;
+    document.getElementsByClassName("price_subtotal")[0].innerText = "$" + total;
+}
