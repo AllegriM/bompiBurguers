@@ -181,6 +181,7 @@ function addItemToCart(title, price){
     cartRow.innerHTML = cartRowContent
     cartContainer.append(cartRow);
     cartRow.getElementsByClassName("cart_item_remove")[0].addEventListener("click", removeCartItem);
+    appearSumbit();
 }
 
 function totalValue(){
@@ -217,4 +218,34 @@ function updateCartTotal(){
     }
     document.getElementsByClassName("price_total")[0].innerText = "$" + total;
     document.getElementsByClassName("price_subtotal")[0].innerText = "$" + total;
+}
+
+// Aparezca realizar pedido //
+
+function appearSumbit(){
+    let item = document.getElementsByClassName("cart_item");
+    // let quantity = document.getElementsByClassName("orderQty");
+    let itemContainer = document.getElementsByClassName("orderCart__container");
+    for (let i = 0; i < item.length; i++) {
+        let prod = item[i];
+        console.log(prod);
+        if (prod != null) {
+            console.log("Llegue a entrar al if");
+            let buttonSection = document.createElement('button');
+            buttonSection.classList.add("orderCart__container_orderbtn");
+            let buttonSectionContent = `
+                <div class="orderCart__container-orderbtn_title">
+                    <p class="">REALIZAR PEDIDO</p>
+                    <span class="orderQty"></span>
+                </div>
+                <div class="orderCart__container-orderbtn_price">
+                    <span></span>
+                </div>
+            `
+            buttonSection.innerHTML = buttonSectionContent;
+            itemContainer.append(buttonSection);
+        }else{
+            console.log("Estoy en el else")
+        }
+    }
 }

@@ -145,9 +145,9 @@
             border: 1px solid $clr-lightgrey-bg;
             .orderCart__container{
                 &_add_item{
-                    padding: .625em .9375em;
                     border-bottom: 1px solid $clr-lightgrey-bg;
                     .cart__ul{
+                        padding: .625em .9375em;
                         .cart_item{
                             display: flex;
                             align-items: center;
@@ -170,7 +170,7 @@
                         }
                     }
                 }
-                &-prices{
+                &_prices{
                     padding: .625em .9375em;
                     border-bottom: 1px solid $clr-lightgrey-bg;
                     ul{
@@ -196,7 +196,7 @@
                         }
                     }
                 }
-                &-discount{
+                &_discount{
                     padding: .625em .9375em;
                     border-bottom: 1px solid $clr-lightgrey-bg;
                     ul{
@@ -248,8 +248,8 @@
                         }
                     }
                 }
-                &-aclarations{
-                    margin-bottom: .625em;
+                &_aclarations{
+                    // margin-bottom: .625em;
                     position: relative;
                     border-top: none;
                     padding: .625em .9375em;
@@ -278,9 +278,22 @@
                         margin: 0;
                     }
                 }
-                &-orderbtn{
+                &_orderbtn{
                     display: none;
-                    padding: .625em .9375em;
+                    padding: 1em 1.2em;
+                    display: flex;
+                    width: 100%;
+                    height: 100%;
+                    border: none;
+                    // background-color: #d3d3d3;
+                    &_title{
+                        font-size: $smd-fs;
+                        color: $clr-footer-font;
+                    }
+                    &_price{
+                        font-size: $smd-fs;
+                        color: $clr-footer-font;
+                    }
                 }
             }
         }
