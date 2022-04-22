@@ -42,6 +42,7 @@
     .delivery__cards-order{
         display: flex;
         align-items: baseline;
+        padding: 0 5%;
         // Cards con productos
         .delivery__menu{
             .delivery__menuOrders{
@@ -53,6 +54,7 @@
                 &-title{
                     margin-bottom: 1em;
                     font-size: $body-big-fs;
+                    text-align: center;
                 }
                 &-container{
                     
@@ -281,18 +283,78 @@
                 &_orderbtn{
                     display: none;
                     padding: 1em 1.2em;
-                    display: flex;
                     width: 100%;
                     height: 100%;
                     border: none;
-                    // background-color: #d3d3d3;
-                    &_title{
-                        font-size: $smd-fs;
-                        color: $clr-footer-font;
+                    // background-color: #dbdbdb;
+                    &_cont{
+                        display: flex;
+                        justify-content: space-between;
+                        &_title{
+                            font-size: $smd-fs;
+                            color: $clr-footer-font;
+                        }
+                        &_price{
+                            font-size: $smd-fs;
+                            color: $clr-footer-font;
+                        }
                     }
-                    &_price{
-                        font-size: $smd-fs;
-                        color: $clr-footer-font;
+                }
+            }
+        }
+        .filter__section{
+            width: 200px;
+            padding: 1em;
+            border: 2px solid $clr-dark-bg;
+            border-radius: 20px;
+            .filter__container{
+                &_title{
+                    display: flex;
+                    flex-direction: column;
+                    p{
+                        font-weight: $fw-bold;
+                    }
+                }
+                &_cat{
+                    display: flex;
+                    flex-direction: column;
+                    p{
+                        font-weight: $fw-bold;
+                    }
+                    a{
+                        color: black;
+                        text-decoration: none;
+                        margin-left: 5px;
+                        cursor: pointer;
+                        &:hover{
+                            background-color: rgb(116, 116, 116);
+                            color: $clr-bg-main;
+                        }
+                    }
+                    .active{
+                        display: block;
+                        border-bottom: 2px solid $clr-bg-main;
+                    }
+                }
+                &_price{
+                    display: flex;
+                    flex-direction: column;
+                    a{
+                        color: black;
+                        text-decoration: none;
+                        margin-left: 5px;
+                        cursor: pointer;
+                        &:hover{
+                            background-color: rgb(116, 116, 116);
+                            color: $clr-bg-main;
+                        }
+                    }
+                    .active{
+                        display: block;
+                        border-bottom: 2px solid $clr-bg-main;
+                    }
+                    p{
+                        font-weight: $fw-bold;
                     }
                 }
             }

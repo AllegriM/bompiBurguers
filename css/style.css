@@ -61,7 +61,8 @@ body {
 
 .delivery__main .delivery__cards-order {
   display: flex;
-  align-items: baseline; }
+  align-items: baseline;
+  padding: 0 5%; }
   .delivery__main .delivery__cards-order .delivery__menu .delivery__menuOrders {
     padding: 2em 1.5em;
     display: flex;
@@ -70,7 +71,8 @@ body {
     align-items: center; }
     .delivery__main .delivery__cards-order .delivery__menu .delivery__menuOrders-title {
       margin-bottom: 1em;
-      font-size: 1.65rem; }
+      font-size: 1.65rem;
+      text-align: center; }
     .delivery__main .delivery__cards-order .delivery__menu .delivery__menuOrders-container .containerBurguers {
       display: flex;
       flex-wrap: wrap;
@@ -246,16 +248,60 @@ body {
     .delivery__main .delivery__cards-order .orders__section .orderCart__container_orderbtn {
       display: none;
       padding: 1em 1.2em;
-      display: flex;
       width: 100%;
       height: 100%;
       border: none; }
-      .delivery__main .delivery__cards-order .orders__section .orderCart__container_orderbtn_title {
-        font-size: 0.875rem;
-        color: #FFFFFF; }
-      .delivery__main .delivery__cards-order .orders__section .orderCart__container_orderbtn_price {
-        font-size: 0.875rem;
-        color: #FFFFFF; }
+      .delivery__main .delivery__cards-order .orders__section .orderCart__container_orderbtn_cont {
+        display: flex;
+        justify-content: space-between; }
+        .delivery__main .delivery__cards-order .orders__section .orderCart__container_orderbtn_cont_title {
+          font-size: 0.875rem;
+          color: #FFFFFF; }
+        .delivery__main .delivery__cards-order .orders__section .orderCart__container_orderbtn_cont_price {
+          font-size: 0.875rem;
+          color: #FFFFFF; }
+  .delivery__main .delivery__cards-order .filter__section {
+    width: 200px;
+    padding: 1em;
+    border: 2px solid #323232;
+    border-radius: 20px; }
+    .delivery__main .delivery__cards-order .filter__section .filter__container_title {
+      display: flex;
+      flex-direction: column; }
+      .delivery__main .delivery__cards-order .filter__section .filter__container_title p {
+        font-weight: 700; }
+    .delivery__main .delivery__cards-order .filter__section .filter__container_cat {
+      display: flex;
+      flex-direction: column; }
+      .delivery__main .delivery__cards-order .filter__section .filter__container_cat p {
+        font-weight: 700; }
+      .delivery__main .delivery__cards-order .filter__section .filter__container_cat a {
+        color: black;
+        text-decoration: none;
+        margin-left: 5px;
+        cursor: pointer; }
+        .delivery__main .delivery__cards-order .filter__section .filter__container_cat a:hover {
+          background-color: #747474;
+          color: #e9d431; }
+      .delivery__main .delivery__cards-order .filter__section .filter__container_cat .active {
+        display: block;
+        border-bottom: 2px solid #e9d431; }
+    .delivery__main .delivery__cards-order .filter__section .filter__container_price {
+      display: flex;
+      flex-direction: column; }
+      .delivery__main .delivery__cards-order .filter__section .filter__container_price a {
+        color: black;
+        text-decoration: none;
+        margin-left: 5px;
+        cursor: pointer; }
+        .delivery__main .delivery__cards-order .filter__section .filter__container_price a:hover {
+          background-color: #747474;
+          color: #e9d431; }
+      .delivery__main .delivery__cards-order .filter__section .filter__container_price .active {
+        display: block;
+        border-bottom: 2px solid #e9d431; }
+      .delivery__main .delivery__cards-order .filter__section .filter__container_price p {
+        font-weight: 700; }
 
 .menu__main {
   background-color: #e9d431;

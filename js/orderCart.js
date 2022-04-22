@@ -64,7 +64,9 @@ const orderStock = [neuquen, cordoba, mendoza, santaFe,
     laRioja, santaCruz, jujuy, sanJuan,
     buenosAires, corrientes, papasComunes, papasCheddar,
     chickenDice, OnionRing, caesar, reySol,
-    coca, cocaZero, agua, pasoToros, budweis, heineken, corona, brahma];
+    coca, cocaZero, agua, pasoToros, 
+    budweis, heineken, corona, brahma
+    ];
 
 let customerOrder;
 let quantity;
@@ -79,9 +81,7 @@ const addHamburguer = () => {
         addHamburguer();
     }
     nombreProducto = orderStock[customerOrder - 1].name;
-    return nombreProducto;
-    // orderCart.push(nuevoProducto);
-    // return nuevoProducto;
+    orderCart.push(nombreProducto);
 }
 
 const addQuantity = () => {
@@ -149,8 +149,8 @@ function ready() {
     }
 }
 
-function addToCartBtn(event){
-    let button = event.target
+function addToCartBtn(e){
+    let button = e.target
     let shopItem = button.parentElement;
     let menuInfo = shopItem.children[1];
     let title = menuInfo.getElementsByClassName("menu_title")[0].innerText;
@@ -200,8 +200,8 @@ function totalValue(){
     document.getElementsByClassName("price_total")[0].innerText = "$" + total;
 }
 
-function removeCartItem(event){
-    let buttonClicked = event.target;
+function removeCartItem(e){
+    let buttonClicked = e.target;
     buttonClicked.parentElement.parentElement.remove();
     updateCartTotal()
 }
@@ -226,26 +226,12 @@ function appearSumbit(){
     let item = document.getElementsByClassName("cart_item");
     // let quantity = document.getElementsByClassName("orderQty");
     let itemContainer = document.getElementsByClassName("orderCart__container");
-    for (let i = 0; i < item.length; i++) {
-        let prod = item[i];
-        console.log(prod);
-        if (prod != null) {
-            console.log("Llegue a entrar al if");
-            let buttonSection = document.createElement('button');
-            buttonSection.classList.add("orderCart__container_orderbtn");
-            let buttonSectionContent = `
-                <div class="orderCart__container-orderbtn_title">
-                    <p class="">REALIZAR PEDIDO</p>
-                    <span class="orderQty"></span>
-                </div>
-                <div class="orderCart__container-orderbtn_price">
-                    <span></span>
-                </div>
-            `
-            buttonSection.innerHTML = buttonSectionContent;
-            itemContainer.append(buttonSection);
-        }else{
-            console.log("Estoy en el else")
-        }
+    let button = document.getElementsByClassName("orderCart__container_orderbtn");
+    if (item != null) {
+        button[0].style.display = 'block';
+        console.log("Llegue a entrar al if");
+    }else{
+        button[0].style.display = 'none';
+        console.log("Estoy en el else")
     }
 }

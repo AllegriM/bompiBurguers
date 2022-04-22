@@ -75,33 +75,36 @@
         </section>
         <section class="delivery__cards-order">
             <div class="filter__section">
-                <div>
-                    <p>Titulo</p>
-                    <input type="text">
-                </div>
-                <div>
-                    <p>Categoria</p>
-                    <a class="hamburguer_btn btn_filter active">Hamburguesa</a>
-                    <a class="extras__btn btn_filter active">Extras</a>
-                    <a class="salad__btn btn_filter active">Ensaladas</a>
-                    <a class="bsalc__btn btn_filter active">Beb. sin alcohol</a>
-                    <a class="bcalc__btn btn_filter active">Beb. con alcohol</a>
+                <div class="filter__container">
+                    <div class="filter__container_title">
+                        <p class="filter__title">Titulo</p>
+                        <input class="filter__input_title" type="text">
+                    </div>
+                    <div class="filter__container_cat">
+                        <p>Categoria</p>
+                        <a class="filter_cat" data-filter="all">Todos</a>
+                        <a class="filter_cat" id="Aburguer" data-filter="burguerSec">Hamburguesa</a>
+                        <a class="filter_cat" id="Aextras" data-filter="extrasSec">Extras</a>
+                        <a class="filter_cat" id="Asalad" data-filter="saladSec">Ensaladas</a>
+                        <a class="filter_cat" id="Absalc" data-filter="bsalcSec">Beb. sin alcohol</a>
+                        <a class="filter_cat" id="Abcalc" data-filter="bcalcSec">Beb. con alcohol</a>
+                    </div>
+                    <div class="filter__container_price">
+                        <p>Precio</p>
+                        <a href="">Hasta $350</a>
+                        <a href="">Hasta $650</a>
+                        <a href="">Hasta $700</a>
+                        <a href="">Hasta $800</a>
+                        <a href="">Hasta $900</a>
+                    </div>
                 </div>
             </div>
-            <div>
-                <p>Precio</p>
-                <a href="">Hasta 350</a>
-                <a href="">Hasta 650</a>
-                <a href="">Hasta 700</a>
-                <a href="">Hasta 800</a>
-                <a href="">Hasta 900</a>
-            </div>
-            <div class="delivery__menu">
-                <div id="hamburguer" class="delivery__menuOrders">
+            <div id="delivery__menu" class="delivery__menu">
+                <div id="hamburguer" class="delivery__menuOrders burguerSec">
                     <h3 class="delivery__menuOrders-title">Hamburguesas</h3>
                     <div class="delivery__menuOrders-container">
                         <ul class="containerBurguers">
-                            <li class="containerBurguers-box hamburguer">
+                            <li class="containerBurguers-box hamburguesa">
                                 <div class="containerBurguers-box-item">
                                     <img src="../img/menu/azteca.png" alt="">
                                     <div class="menu_info">
@@ -118,7 +121,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="containerBurguers-box hamburguer">
+                            <li class="containerBurguers-box hamburguesa">
                                 <div class="containerBurguers-box-item">
                                     <img src="../img/menu/bigBompi.png" alt="">
                                     <div class="menu_info">
@@ -138,7 +141,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="containerBurguers-box hamburguer">
+                            <li class="containerBurguers-box hamburguesa">
                                 <div class="containerBurguers-box-item">
                                     <img src="../img/menu/blueCheese.png" alt="">
                                     <div class="menu_info">
@@ -157,7 +160,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="containerBurguers-box hamburguer">
+                            <li class="containerBurguers-box hamburguesa">
                                 <div class="containerBurguers-box-item">
                                     <img src="../img/menu/completeBurguer.png" alt="">
                                     <div class="menu_info">
@@ -177,7 +180,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="containerBurguers-box hamburguer">
+                            <li class="containerBurguers-box hamburguesa">
                                 <div class="containerBurguers-box-item">
                                     <img src="../img/menu/delBosque.png" alt="">
                                     <div class="menu_info">
@@ -196,7 +199,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="containerBurguers-box hamburguer">
+                            <li class="containerBurguers-box hamburguesa">
                                 <div class="containerBurguers-box-item">
                                     <img src="../img/menu/hamCheeseBurg.png" alt="">
                                     <div class="menu_info">
@@ -216,7 +219,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="containerBurguers-box hamburguer">
+                            <li class="containerBurguers-box hamburguesa">
                                 <div class="containerBurguers-box-item">
                                     <img src="../img/menu/jalapeñoBurguer.png" alt="">
                                     <div class="menu_info">
@@ -228,14 +231,13 @@
                                             $750
                                         </p>
                                     </div>
-
                                     <div class="plus">
                                         <div class="plus__liner"></div>
                                         <div class="plus__linel"></div>
                                     </div>
                                 </div>
                             </li>
-                            <li class="containerBurguers-box hamburguer">
+                            <li class="containerBurguers-box hamburguesa">
                                 <div class="containerBurguers-box-item">
                                     <img src="../img/menu/pamperniBurguer.png" alt="">
                                     <div class="menu_info">
@@ -254,7 +256,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="containerBurguers-box hamburguer">
+                            <li class="containerBurguers-box hamburguesa">
                                 <div class="containerBurguers-box-item">
                                     <img src="../img/menu/pickleburguer.png" alt="">
                                     <div class="menu_info">
@@ -272,7 +274,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="containerBurguers-box hamburguer">
+                            <li class="containerBurguers-box hamburguesa">
                                 <div class="containerBurguers-box-item">
                                     <img src="../img/menu/sosPollo.png" alt="">
                                     <div class="menu_info">
@@ -295,13 +297,13 @@
                         </ul>
                     </div>
                 </div>
-                <div id="extras" class="delivery__menuOrders">
+                <div id="extras" class="delivery__menuOrders extrasSec">
                     <h3 class="delivery__menuOrders-title">Extras</h3>
                     <div class="delivery__menuOrders-container">
                         <ul class="containerBurguers">
-                            <li class="containerBurguers-box extra">
+                            <li class="containerBurguers-box extras">
                                 <div class="containerBurguers-box-item">
-                                    <img class="extras" src="../img/menu/papasCombo.png" alt="">
+                                    <img class="ss" src="../img/menu/papasCombo.png" alt="">
                                     <div class="menu_info">
                                         <h4 class="menu_title">COMMON FRIES</h4>
                                         <p class="menu-desc">The best friend of your burguer. The classic ones.
@@ -317,7 +319,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="containerBurguers-box extra">
+                            <li class="containerBurguers-box extras">
                                 <div class="containerBurguers-box-item">
                                     <img class="extras" src="../img/menu/papasCheddar.png" alt="">
                                     <div class="menu_info">
@@ -335,7 +337,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="containerBurguers-box extra">
+                            <li class="containerBurguers-box extras">
                                 <div class="containerBurguers-box-item">
                                     <img class="extras" src="../img/menu/tendersPollo.png" alt="">
                                     <div class="menu_info">
@@ -353,7 +355,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="containerBurguers-box extra">
+                            <li class="containerBurguers-box extras">
                                 <div class="containerBurguers-box-item">
                                     <img class="extras" src="../img/menu/ArosCebolla.png" alt="">
                                     <div class="menu_info">
@@ -375,11 +377,11 @@
                         </ul>
                     </div>
                 </div>
-                <div id="salads" class="delivery__menuOrders">
+                <div id="salads" class="delivery__menuOrders saladSec">
                     <h3 class="delivery__menuOrders-title">Ensaladas</h3>
                     <div class="delivery__menuOrders-container">
                         <ul class="containerBurguers">
-                            <li class="containerBurguers-box salad">
+                            <li class="containerBurguers-box ensalada">
                                 <div class="containerBurguers-box-item">
                                     <div class="salad__container">
                                         <img class="salad__img" src="../img/menu/salad_caesar.png" alt="">
@@ -401,7 +403,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="containerBurguers-box salad">
+                            <li class="containerBurguers-box ensalada">
                                 <div class="containerBurguers-box-item">
                                     <div class="salad__container">
                                         <img class="salad__img" src="../img/menu/salad_reysol.png" alt="">
@@ -425,7 +427,7 @@
                         </ul>
                     </div>
                 </div>
-                <div id="bebsalc" class="delivery__menuOrders">
+                <div id="bebsalc" class="delivery__menuOrders bsalcSec">
                     <h3 class="delivery__menuOrders-title">Bebidas sin alcohol</h3>
                     <div class="delivery__menuOrders-container">
                         <ul class="containerBurguers">
@@ -511,7 +513,7 @@
                         </ul>
                     </div>
                 </div>
-                <div id="bebcalc" class="delivery__menuOrders">
+                <div id="bebcalc" class="delivery__menuOrders bcalcSec">
                     <h3 class="delivery__menuOrders-title">Bebidas con alcohol</h3>
                     <div class="delivery__menuOrders-container">
                         <ul class="containerBurguers">
@@ -657,15 +659,17 @@
                         <h5>Aclaraciones</h5>
                         <textarea name="" id="" cols="30" rows="10"></textarea>
                     </div>
-                    <!-- <button class="orderCart__container_orderbtn ">
-                        <div class="orderCart__container-orderbtn_title">
-                            <p class="">REALIZAR PEDIDO</p>
-                            <span class="orderQty"></span>
+                    <button class="orderCart__container_orderbtn">
+                        <div class="orderCart__container_orderbtn_cont">
+                            <div class="orderCart__container-orderbtn_cont_title">
+                                <p class="">REALIZAR PEDIDO</p>
+                                <span class="orderQty"></span>
+                            </div>
+                            <span class="orderCart__container-orderbtn_cont_price">
+                                <span></span>
+                            </span>
                         </div>
-                        <span class="orderCart__container-orderbtn_price">
-                            <span></span>
-                        </span>
-                    </button> -->
+                    </button>
                 </div>
             </div>
         </section>
@@ -695,6 +699,7 @@
         </div>
     </footer>
     <script src="../js/orderCart.js"></script>
+    <script src="../js/filter.js"></script>
 </body>
 
 </html>
