@@ -29,6 +29,46 @@ body {
     .header .nav .nav__ul .nav__item .nav__link {
       color: #ffffff; }
 
+.header {
+  height: 100%;
+  width: 100%;
+  background-color: #000000;
+  position: sticky;
+  top: 0;
+  z-index: 999; }
+  .header .nav .nav__ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center; }
+    .header .nav .nav__ul .nav__item .nav__link {
+      color: #ffffff; }
+    .header .nav .nav__ul .cartContainer {
+      cursor: pointer; }
+      .header .nav .nav__ul .cartContainer .cart {
+        font-size: 1.65rem;
+        color: white;
+        position: relative;
+        z-index: -1; }
+        .header .nav .nav__ul .cartContainer .cart .cartQuantity {
+          position: absolute;
+          color: #ffffff;
+          font-size: .75rem;
+          top: -4px;
+          right: -1px;
+          z-index: 50; }
+        .header .nav .nav__ul .cartContainer .cart::after {
+          content: '';
+          position: absolute;
+          top: -8px;
+          right: -8px;
+          cursor: pointer;
+          background-color: red;
+          width: 18px;
+          height: 18px;
+          border-radius: 50%;
+          z-index: 0; }
+
 .delivery__main .delivery__menuOptions {
   display: flex;
   align-items: center;
@@ -105,15 +145,14 @@ body {
               margin-top: .5em;
               font-weight: 700; }
           .delivery__main .delivery__cards-order .delivery__menu .delivery__menuOrders-container .containerBurguers-box .containerBurguers-box-item .salad__img {
-            width: 160px;
             height: 130px; }
           .delivery__main .delivery__cards-order .delivery__menu .delivery__menuOrders-container .containerBurguers-box .containerBurguers-box-item img {
             height: 125px;
-            width: 135px;
+            width: 160px;
             object-fit: cover; }
           .delivery__main .delivery__cards-order .delivery__menu .delivery__menuOrders-container .containerBurguers-box .containerBurguers-box-item .extras {
             height: 130px;
-            width: 160px; }
+            width: 165px; }
           .delivery__main .delivery__cards-order .delivery__menu .delivery__menuOrders-container .containerBurguers-box .containerBurguers-box-item .plus {
             padding: 15px;
             cursor: pointer;
@@ -158,6 +197,14 @@ body {
           font-weight: 700;
           padding: 10px 15px;
           overflow: hidden; }
+          .delivery__main .delivery__cards-order .orders__section .orderCart__container_add_item .cart__ul .cart_item_img {
+            width: 140px;
+            height: 110px;
+            object-fit: cover;
+            background-size: cover; }
+            .delivery__main .delivery__cards-order .orders__section .orderCart__container_add_item .cart__ul .cart_item_img_detail {
+              width: 100%;
+              height: 100%; }
           .delivery__main .delivery__cards-order .orders__section .orderCart__container_add_item .cart__ul .cart_item_quantity {
             color: #fd4f57; }
     .delivery__main .delivery__cards-order .orders__section .orderCart__container_prices {
