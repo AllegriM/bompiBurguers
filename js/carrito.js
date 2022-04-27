@@ -123,6 +123,7 @@ allMenu.forEach(prod => {
 
 // Variables
 
+
 // Nav Bar
 
 let cartQty = document.querySelector('.cartQuantity');
@@ -133,12 +134,16 @@ let menuList = document.getElementsByClassName('containerBurguers');
 let menuItem = document.getElementsByClassName('containerBurguers-box');
 let cartContainer = document.getElementsByClassName('orderCart__container');
 
+// Modal
+
+let submitBtn = document.querySelector('.orderCart__container_orderbtn');
+
 // Carrito 
 let cartList = document.querySelector('#cart__ul');
 let cartItem = document.getElementsByClassName('cart_item');
 let subtotal = document.getElementsByClassName('price_subtotal');
 let total = document.getElementsByClassName('price_total');
-let deleteButton = document.getElementsByClassName('cart_item_remove');
+let delBtn = document.querySelectorAll('.cart_item_remove');
 
 let carrito = [];
 
@@ -152,18 +157,26 @@ function callEventListeners(){
         let addButton = plusBtn[i];
         addButton.addEventListener("click", addProduct);
     }
-
-    // for (let i = 0; i < deleteButton.length; i++) {
-    //     let delBtn = deleteButton[i];
-    //     console.log(delBtn)
-    //     delBtn.addEventListener("click", removeItem);
-    // }
-
-    // carrito.addEventListener("click", removeItem);
+    
+    cartList.addEventListener('click', removeItem);
 
     document.addEventListener('DOMContentLoaded', () => {
         carrito = JSON.parse(localStorage.getItem('cart')) || [];
         addHTMLCart();
+    })
+
+    submitBtn.addEventListener('click', (e) =>{
+        carrito = JSON.parse(localStorage.getItem('cart'))
+        console.log(carrito);
+        if (carrito === null) {
+            alert('No hay productos en la lista')
+        }else{
+            alert("Gracias por su compra!");
+            e.preventDefault();
+            carrito = [];
+            localStorage.removeItem('cart');
+            cleanHTML();
+        }
     })
 }
 // Functions
@@ -176,9 +189,6 @@ function addProduct(e) {
 }
 
 function removeItem(e) {
-    console.log("hello");
-    // console.log(e.target)
-    console.log(e.target.classList.contains('cart_item_remove'));
     if (e.target.classList.contains('cart_item_remove')) {
         
         const productId = e.target.getAttribute('data-remove');
@@ -227,8 +237,6 @@ function getProductInfo(product){
     }
 
     addHTMLCart();
-
-    carrito.addEventListener("click", removeItem);
 }
 
 function addHTMLCart() {
@@ -247,7 +255,7 @@ function addHTMLCart() {
                         <div class="cart_item_remove" data-remove="${product.id}"><i class="fa-solid fa-xmark"></i></div>
                         `
         row.innerHTML = rowContent;
-        cartList.append(row);
+        cartList.appendChild(row);
     });
     saveLocalStorage();
 }
@@ -275,3 +283,27 @@ function totalGeneral() {
 function saveLocalStorage() {
     localStorage.setItem("cart", JSON.stringify(carrito));
 }
+
+
+let itemsCart = localStorage.getItem("cart");
+// console.log(itemsCart)
+for (let i = 0; i < localStorage.length; i++) {
+    let key = localStorage.key(i);
+    // console.log(key);
+    let valor = localStorage.getItem(key);
+    // console.log(valor);
+    const itemCart = JSON.parse(valor).length;
+    console.log(itemCart);
+    if (itemCart == 0) {
+        console.log("No hay items");
+        
+    }else{
+        console.log("Hay items");
+    }
+    // for (let i = 0; i < itemCart.length; i++) {
+    //     const el = itemCart[i];
+    //     let itemId = el.id;
+    //     // console.log(itemId);
+    // }
+}
+

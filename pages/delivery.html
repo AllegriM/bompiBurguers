@@ -101,6 +101,96 @@
                     </div>
                 </div>
             </div>
+            <div class="modal-bg">
+                <div class="modal">
+                    <div class="orders__section">
+                        <div class="orderCart__container">
+                            <div class="orderCart__container_close circCont">
+                                <button class="circle boxShadow" data-animation="fadeOut" data-remove="3000">
+                                </button>
+                            </div>
+                            <div class="orderCart__container_info">
+                                <div class="container_info info_name">Name</div>
+                                <div class="container_info info_quantity">Amount</div>
+                                <div class="container_info info_price">Price</div>
+                                <div class="container_info info_total">Total</div>
+                            </div>
+                            <div class="orderCart__container_add_item">
+                                <ul class="cart__ul" id="cart__ul">
+                                    <!-- <li class="cart_item">
+                                        <div class="cart_item_quantity">1x</div>
+                                        <div class="cart_item_description">Neuquen</div>
+                                        <div class="cart_item_value">$860</div>
+                                        <div class="cart_item_remove"><i class="fa-solid fa-xmark"></i></div>
+                                    </li>
+                                    <li class="cart_item">
+                                        <div class="cart_item_quantity">1x</div>
+                                        <div class="cart_item_description">Neuquen</div>
+                                        <div class="cart_item_value">$860</div>
+                                        <div class="cart_item_remove"><i class="fa-solid fa-xmark"></i></div>
+                                    </li>
+                                    <li class="cart_item">
+                                        <div class="cart_item_quantity">1x</div>
+                                        <div class="cart_item_description">Neuquen</div>
+                                        <div class="cart_item_value">$860</div>
+                                        <div class="cart_item_remove"><i class="fa-solid fa-xmark"></i></div>
+                                    </li>
+                                    <li class="cart_item">
+                                        <div class="cart_item_quantity">1x</div>
+                                        <div class="cart_item_description">Neuquen</div>
+                                        <div class="cart_item_value">$860</div>
+                                        <div class="cart_item_remove"><i class="fa-solid fa-xmark"></i></div>
+                                    </li> -->
+                                <!-- </ul> -->
+                            </div>
+                            <div class="orderCart__container_prices">
+                                <ul>
+                                    <li class="li__subtotal">
+                                        <h6>SUBTOTAL</h6>
+                                        <span class="price_subtotal"></span>
+                                    </li>
+                                    <li class="li__send">
+                                        <h6>COSTO DE ENVIO</h6>
+                                        <span class="">$0</span>
+                                    </li>
+                                    <li class="li__total">
+                                        <h4>Total</h4>
+                                        <span class="price_total"></span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="orderCart__container_discount">
+                                <ul>
+                                    <li class="disccount__text">
+                                        <label for="">Cupon de descuento</label>
+                                    </li>
+                                    <li class="disccount__btn">
+                                        <div class="disccount__btn-container">
+                                            <input type="">
+                                            <button>Aplicar</button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="orderCart__container_aclarations">
+                                <h5>Aclaraciones</h5>
+                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                            </div>
+                            <button class="orderCart__container_orderbtn">
+                                <div class="orderCart__container_orderbtn_cont">
+                                    <div class="orderCart__container-orderbtn_cont_title">
+                                        <p class="">REALIZAR PEDIDO</p>
+                                        <span class="orderQty"></span>
+                                    </div>
+                                    <span class="orderCart__container-orderbtn_cont_price">
+                                        <span></span>
+                                    </span>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div id="delivery__menu" class="delivery__menu">
                 <div id="hamburguer" class="delivery__menuOrders burguerSec">
                     <h3 class="delivery__menuOrders-title">Productos</h3>
@@ -598,82 +688,6 @@
                     </div>
                 </div>
             </div> -->
-            <div class="orders__section">
-                <div class="orderCart__container">
-                    <div class="orderCart__container_add_item">
-                        <ul class="cart__ul" id="cart__ul">
-                            <!-- <li class="cart_item">
-                                <div class="cart_item_quantity">1x</div>
-                                <div class="cart_item_description">Neuquen</div>
-                                <div class="cart_item_value">$860</div>
-                                <div class="cart_item_remove"><i class="fa-solid fa-xmark"></i></div>
-                            </li>
-                            <li class="cart_item">
-                                <div class="cart_item_quantity">1x</div>
-                                <div class="cart_item_description">Neuquen</div>
-                                <div class="cart_item_value">$860</div>
-                                <div class="cart_item_remove"><i class="fa-solid fa-xmark"></i></div>
-                            </li>
-                            <li class="cart_item">
-                                <div class="cart_item_quantity">1x</div>
-                                <div class="cart_item_description">Neuquen</div>
-                                <div class="cart_item_value">$860</div>
-                                <div class="cart_item_remove"><i class="fa-solid fa-xmark"></i></div>
-                            </li>
-                            <li class="cart_item">
-                                <div class="cart_item_quantity">1x</div>
-                                <div class="cart_item_description">Neuquen</div>
-                                <div class="cart_item_value">$860</div>
-                                <div class="cart_item_remove"><i class="fa-solid fa-xmark"></i></div>
-                            </li> -->
-                        <!-- </ul> -->
-                    </div>
-                    <div class="orderCart__container_prices">
-                        <ul>
-                            <li class="li__subtotal">
-                                <h6>SUBTOTAL</h6>
-                                <span class="price_subtotal"></span>
-                            </li>
-                            <li class="li__send">
-                                <h6>COSTO DE ENVIO</h6>
-                                <span class="">$0</span>
-                            </li>
-                            <li class="li__total">
-                                <h4>Total</h4>
-                                <span class="price_total"></span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="orderCart__container_discount">
-                        <ul>
-                            <li class="disccount__text">
-                                <label for="">Cupon de descuento</label>
-                            </li>
-                            <li class="disccount__btn">
-                                <div class="disccount__btn-container">
-                                    <input type="">
-                                    <button>Aplicar</button>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="orderCart__container_aclarations">
-                        <h5>Aclaraciones</h5>
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
-                    </div>
-                    <button class="orderCart__container_orderbtn">
-                        <div class="orderCart__container_orderbtn_cont">
-                            <div class="orderCart__container-orderbtn_cont_title">
-                                <p class="">REALIZAR PEDIDO</p>
-                                <span class="orderQty"></span>
-                            </div>
-                            <span class="orderCart__container-orderbtn_cont_price">
-                                <span></span>
-                            </span>
-                        </div>
-                    </button>
-                </div>
-            </div>
         </section>
     </main>
     <footer class="footer">
@@ -702,6 +716,7 @@
     </footer>
     <script src="../js/carrito.js"></script>
     <script src="../js/filter.js"></script>
+    <script src="../js/modal.js"></script>
 </body>
 
 </html>
