@@ -55,7 +55,7 @@ body {
           color: #ffffff;
           font-size: .75rem;
           top: -4px;
-          right: -1px;
+          right: -2px;
           z-index: 50; }
         .header .nav .nav__ul .cartContainer .cart::after {
           content: '';
@@ -303,7 +303,8 @@ body {
           border-bottom: 1px solid #8d8d8d; }
           .delivery__main .delivery__cards-order .modal-bg .modal .orders__section .orderCart__container_add_item .cart__ul {
             padding: 0 .9375em;
-            height: 50%; }
+            height: calc(131px * 2);
+            overflow-y: scroll; }
             .delivery__main .delivery__cards-order .modal-bg .modal .orders__section .orderCart__container_add_item .cart__ul .cart_item {
               display: flex;
               align-items: center;
@@ -425,16 +426,18 @@ body {
           padding: 1em 1.2em;
           width: 100%;
           height: 100%;
-          border: none; }
+          border: none;
+          background-color: #dbdbdb; }
           .delivery__main .delivery__cards-order .modal-bg .modal .orders__section .orderCart__container_orderbtn_cont {
             display: flex;
             justify-content: space-between; }
             .delivery__main .delivery__cards-order .modal-bg .modal .orders__section .orderCart__container_orderbtn_cont_title {
+              display: flex;
               font-size: 0.875rem;
-              color: #FFFFFF; }
+              color: #000000; }
             .delivery__main .delivery__cards-order .modal-bg .modal .orders__section .orderCart__container_orderbtn_cont_price {
               font-size: 0.875rem;
-              color: #FFFFFF; }
+              color: #000000; }
   .delivery__main .delivery__cards-order .bg-active {
     visibility: visible;
     opacity: 1; }

@@ -131,7 +131,7 @@ let cartQty = document.querySelector('.cartQuantity');
 // Card Menu
 let plusBtn = document.getElementsByClassName('plus');
 let menuList = document.getElementsByClassName('containerBurguers');
-let menuItem = document.getElementsByClassName('containerBurguers-box');
+let menuItem = document.querySelectorAll('.containerBurguers-box-item');
 let cartContainer = document.getElementsByClassName('orderCart__container');
 
 // Modal
@@ -141,9 +141,12 @@ let submitBtn = document.querySelector('.orderCart__container_orderbtn');
 // Carrito 
 let cartList = document.querySelector('#cart__ul');
 let cartItem = document.getElementsByClassName('cart_item');
-let subtotal = document.getElementsByClassName('price_subtotal');
-let total = document.getElementsByClassName('price_total');
+let subtotal = document.querySelector('.price_subtotal');
+let total = document.querySelector('.price_total');
 let delBtn = document.querySelectorAll('.cart_item_remove');
+let qtySubmit = document.querySelector('.orderQty')
+let totalSubmit = document.querySelector('.orderCart__container_orderbtn_cont_price')
+
 
 let carrito = [];
 
@@ -167,7 +170,7 @@ function callEventListeners(){
 
     submitBtn.addEventListener('click', (e) =>{
         carrito = JSON.parse(localStorage.getItem('cart'))
-        console.log(carrito);
+        // console.log(carrito);
         if (carrito === null) {
             alert('No hay productos en la lista')
         }else{
@@ -175,6 +178,8 @@ function callEventListeners(){
             e.preventDefault();
             carrito = [];
             localStorage.removeItem('cart');
+            totalGeneral();
+            itemIconCart();
             cleanHTML();
         }
     })
@@ -192,7 +197,7 @@ function removeItem(e) {
     if (e.target.classList.contains('cart_item_remove')) {
         
         const productId = e.target.getAttribute('data-remove');
-        console.log(productId)
+        // console.log(productId)
         carrito = carrito.filter(product => product.id != productId);
         console.log(carrito);
         addHTMLCart();
@@ -235,7 +240,6 @@ function getProductInfo(product){
     }else{
         carrito.push(newProduct);
     }
-
     addHTMLCart();
 }
 
@@ -258,6 +262,8 @@ function addHTMLCart() {
         cartList.appendChild(row);
     });
     saveLocalStorage();
+    itemIconCart();
+    totalGeneral();
 }
 
 function purchaseCart() {
@@ -268,16 +274,6 @@ function purchaseCart() {
 function cleanHTML() {
     
     cartList.innerHTML = '';
-
-    total.innerHTML = totalGeneral();
-}
-
-function totalGeneral() {
-    for (let i = 0; i < cartList.length; i++) {
-        const item = cartList[i];
-        total += item.price;
-        console.log(item)
-    }
 }
 
 function saveLocalStorage() {
@@ -287,23 +283,39 @@ function saveLocalStorage() {
 
 let itemsCart = localStorage.getItem("cart");
 // console.log(itemsCart)
-for (let i = 0; i < localStorage.length; i++) {
-    let key = localStorage.key(i);
-    // console.log(key);
-    let valor = localStorage.getItem(key);
-    // console.log(valor);
-    const itemCart = JSON.parse(valor).length;
-    console.log(itemCart);
-    if (itemCart == 0) {
-        console.log("No hay items");
-        
-    }else{
-        console.log("Hay items");
+function itemIconCart() {
+    for (let i = 0; i < localStorage.length; i++) {
+        let key = localStorage.key(i);
+        // console.log(key);
+        let valor = localStorage.getItem(key);
+        // console.log(valor);
+        const itemCart = JSON.parse(valor).length;
+        // console.log(itemCart);
+        if (itemCart === 0) {
+            cartQty.textContent = 0;
+            qtySubmit.textContent = "(" + 0 + ")";
+        }else{
+            cartQty.textContent = itemCart;
+            qtySubmit.textContent = `(${itemCart})`;
+        }
     }
-    // for (let i = 0; i < itemCart.length; i++) {
-    //     const el = itemCart[i];
-    //     let itemId = el.id;
-    //     // console.log(itemId);
-    // }
 }
 
+function totalGeneral() {
+    let itemValues = 0;
+    for (let i = 0; i < localStorage.length; i++) {
+        let key = localStorage.key(i);
+        console.log(key);
+        let valor = localStorage.getItem(key);
+        console.log(valor);
+        const itemCart = JSON.parse(valor);
+        for (let i = 0; i < itemCart.length; i++) {
+            const itemPrice = itemCart[i];
+            let indPrice = Number(itemPrice.subtotal.replace("$", ""));
+            itemValues += indPrice;
+        }
+    }
+    subtotal.textContent = "$" + itemValues;
+    total.textContent = "$" + itemValues;
+    totalSubmit.textContent = `TOTAL($${itemValues})`;
+}
