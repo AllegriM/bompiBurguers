@@ -22,9 +22,11 @@
     <link rel="icon" href="../img/hamburguesa.png" type="image/gif">
     <!-- Linking CSS  -->
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/efects.css">
 </head>
 
 <body>
+    
     <header class="header">
         <nav class="nav">
             <ul class="nav__ul">
@@ -51,6 +53,27 @@
         </nav>
     </header>
     <main class="delivery__main">
+        <div class="alert hide">
+            <span class="fas fa-exclamation-circle"></span>
+            <span class="msg">Done! Item added!</span>
+            <div class="close-btn">
+                <span class="fas fa-times"></span>
+            </div>
+        </div>
+        <div class="removeAlert hide">
+            <span class="fas fa-exclamation-circle removeCircle"></span>
+            <span class="removeMsg">Done! Item removed!</span>
+            <div class="removeClose-btn">
+                <span class="fas fa-times"></span>
+            </div>
+        </div>
+        <!-- <div class="alert hide">
+            <span class="fas fa-exclamation-circle"></span>
+            <span class="msg">Done! Item removed from cart!</span>
+            <div class="close-btn">
+                <span class="fas fa-times"></span>
+            </div>
+        </div> -->
         <!-- <section class="delivery__menuOptions">
             <div class="delivery__menuOptions-title">
                 <h2 class="">Menu y Precios</h2>
@@ -716,7 +739,8 @@
     </footer>
     <script src="../js/carrito.js"></script>
     <script src="../js/filter.js"></script>
-    <script src="../js/modal.js"></script>
+    <script src="../js/cartModal.js"></script>
+    <script src="../js/animatedModals.js"></script>
 </body>
 
 </html>

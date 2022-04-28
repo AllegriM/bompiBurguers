@@ -1,0 +1,113 @@
+/* Add green modal button  */
+.alert{
+    background: #90f377;
+    padding: 20px 40px;
+    width: 300px;
+    min-width: 300px;
+    position: absolute;
+    right: 0;
+    top: 20px;
+    border-radius: 4px;
+    border-left: 8px solid #18ce00;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+
+}
+.alert.showAlert{
+    opacity: 1;
+    pointer-events: auto;
+}
+.alert.show{
+    animation: show_slide 1s ease forwards;
+}
+.alert.hide{
+    animation: hide_slide 1s ease forwards;
+}
+.alert .fa-exclamation-circle{
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #18ce00;
+    font-size: 30px;
+}
+.alert .msg{
+    padding: 0 20px;
+    font-size: 18px;
+    color: #18ce00;
+}
+.alert .close-btn{
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #90f377;
+    padding: 20px 18px;
+    cursor: pointer;
+}
+.alert .close-btn:hover{
+    background: #90f377;
+}
+.alert .close-btn .fas{
+    color: #18ce00;
+    font-size: 22px;
+    line-height: 40px;
+}
+
+/* Remove red modal button  */
+
+.removeAlert{
+    background: #f37777;
+    padding: 20px 40px;
+    width: 350px;
+    min-width: 300px;
+    position: absolute;
+    right: 0;
+    top: 20px;
+    border-radius: 4px;
+    border-left: 8px solid #ce0000;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+.removeAlert.showAlert{
+    opacity: 1;
+    pointer-events: auto;
+}
+.removeAlert.show{
+    animation: show_slide 1s ease forwards;
+}
+.removeAlert.hide{
+    animation: hide_slide 1s ease forwards;
+}
+.removeAlert .removeCircle{
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ce0000;
+    font-size: 30px;
+}
+.removeAlert .removeMsg{
+    padding: 0 20px;
+    font-size: 18px;
+    color: #ce0000;
+}
+.removeAlert .removeClose-btn{
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #f37777;
+    padding: 20px 18px;
+    cursor: pointer;
+}
+.removeAlert .removeClose-btn:hover{
+    background: #e95454;
+}
+.removeAlert .removeClose-btn .fas{
+    color: #ce0000;
+    font-size: 22px;
+    line-height: 40px;
+}

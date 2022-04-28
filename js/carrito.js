@@ -30,8 +30,7 @@ class Producto {
 // Hamburguesas
 const neuquen = new Producto(1, "NEUQUEN", "hamburguesa",`C:\Users\Marco\Desktop\CoderHouse\Bompi Burguer\img\menu\neuquen.png`,780, `Smoked cheese, arugula, mint, pine mushroom pickle & merken
 mayonnese.`);
-const cordoba = new Producto(2, "CORDOBA", "hamburguesa",` `,750, `Smoked cheese, arugula, mint, pine mushroom pickle & merken
-mayonnese.`);
+const cordoba = new Producto(2, "CORDOBA", "hamburguesa",` `,750, `Smoked cheese, guacamole, onion rings, arugula, capuccine lettuce & sweet mustard.`);
 const mendoza = new Producto(3, "MENDOZA", "hamburguesa",` `,800, `Double hamburguer, double cheddar, pickled cucumbers,
 onion, capuccine lettuce & special sauce.`);
 const misiones = new Producto(4, "MISIONES", "hamburguesa",` `,780, `Blue cheese, caramelized onion, arugula & eggplant
@@ -108,8 +107,8 @@ allMenu.forEach(prod => {
                     </div>
 
                     <div class="plus" data-id="${prod.id}">
-                        <div class="plus__liner"></div>
-                        <div class="plus__linel"></div>
+                        <div class="plus__liner plus__liner"></div>
+                        <div class="plus__linel plus__liner"></div>
                     </div>
                 </div>
                 `
@@ -133,6 +132,7 @@ let plusBtn = document.getElementsByClassName('plus');
 let menuList = document.getElementsByClassName('containerBurguers');
 let menuItem = document.querySelectorAll('.containerBurguers-box-item');
 let cartContainer = document.getElementsByClassName('orderCart__container');
+let plusInBtn = document.querySelectorAll('.plusliner')
 
 // Modal
 
@@ -158,6 +158,7 @@ function callEventListeners(){
     // Get add buttons and apply addProduct()
     for (let i = 0; i < plusBtn.length; i++) {
         let addButton = plusBtn[i];
+        // console.log(addButton);
         addButton.addEventListener("click", addProduct);
     }
     
@@ -180,6 +181,7 @@ function callEventListeners(){
             localStorage.removeItem('cart');
             totalGeneral();
             itemIconCart();
+            addHTMLCart();
             cleanHTML();
         }
     })
@@ -187,20 +189,29 @@ function callEventListeners(){
 // Functions
 
 function addProduct(e) {
-    if (e.target.classList.contains('plus')) {
+    if (e.target.classList.contains('plus')){
         const productSelected = e.target.parentElement;
         getProductInfo(productSelected);
+    }else if (e.target.classList.contains('plus__liner')){
+        const productSelected = e.target.parentElement.parentElement;
+        getProductInfo(productSelected);;
     }
 }
 
 function removeItem(e) {
     if (e.target.classList.contains('cart_item_remove')) {
-        
         const productId = e.target.getAttribute('data-remove');
         // console.log(productId)
         carrito = carrito.filter(product => product.id != productId);
-        console.log(carrito);
+        // console.log(carrito);
         addHTMLCart();
+        removeModalItem();
+    }else if (e.target.classList.contains('fa-xmark')){
+        const productId = e.target.parentElement.getAttribute('data-remove');
+        carrito = carrito.filter(product => product.id != productId);
+        // console.log(carrito);
+        addHTMLCart();
+        removeModalItem();
     }
 }
 
@@ -245,7 +256,7 @@ function getProductInfo(product){
 
 function addHTMLCart() {
     
-    cleanHTML()
+    cleanHTML();
 
     carrito.forEach(product => {
         let row = document.createElement('li');
@@ -305,9 +316,9 @@ function totalGeneral() {
     let itemValues = 0;
     for (let i = 0; i < localStorage.length; i++) {
         let key = localStorage.key(i);
-        console.log(key);
+        // console.log(key);
         let valor = localStorage.getItem(key);
-        console.log(valor);
+        // console.log(valor);
         const itemCart = JSON.parse(valor);
         for (let i = 0; i < itemCart.length; i++) {
             const itemPrice = itemCart[i];
