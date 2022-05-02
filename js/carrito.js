@@ -28,38 +28,28 @@ class Producto {
 //********* Productos *********//
 
 // Hamburguesas
-const neuquen = new Producto(1, "NEUQUEN", "hamburguesa",`C:\Users\Marco\Desktop\CoderHouse\Bompi Burguer\img\menu\neuquen.png`,780, `Smoked cheese, arugula, mint, pine mushroom pickle & merken
-mayonnese.`);
-const cordoba = new Producto(2, "CORDOBA", "hamburguesa",` `,750, `Smoked cheese, guacamole, onion rings, arugula, capuccine lettuce & sweet mustard.`);
-const mendoza = new Producto(3, "MENDOZA", "hamburguesa",` `,800, `Double hamburguer, double cheddar, pickled cucumbers,
-onion, capuccine lettuce & special sauce.`);
-const misiones = new Producto(4, "MISIONES", "hamburguesa",` `,780, `Blue cheese, caramelized onion, arugula & eggplant
-mayonnaise.`);
-const chaco = new Producto(5, "CHACO", "hamburguesa",` `,770, `Danbo cheese, tomatoe, cappucine lettuce, pickled
-cucumbers, white onion & mostaza.`);
-const salta = new Producto(6, "SALTA", "hamburguesa",` `,800, `Danbo cheese, grilled egg, cooked ham, grilled onion &
-olvie mayoneese.`);
-const jujuy = new Producto(7, "JUJUY", "hamburguesa",` `,750, `Pategras cheese, fresh tomatoes, pickled jalapeno &
-guacamole.`);
-const tucuman = new Producto(8, "TUCUMAN", "hamburguesa",` `,770, `Pategras cheese, marinated tomatoes, capuccine lettuce &
-alioli`);
-const chubut = new Producto(9, "CHUBUT", "hamburguesa",` `,850, `Cheddar cheese, smoked bacon, pickled cucumbers & ketchup.`);
-const corrientes = new Producto(10, "CORRIENTES", "hamburguesa",` `,830, `Fried chicken breast, smoked bacon, capuccine lettuce, &
-tartar sauce.`);
+const neuquen = new Producto(1, "NEUQUEN", "hamburguesa",`C:\Users\Marco\Desktop\CoderHouse\Bompi Burguer\img\menu\neuquen.png`,780, `Queso ahumado, rúcula, menta, pickle de hongos de pino y mayonesa de merken.`);
+const cordoba = new Producto(2, "CORDOBA", "hamburguesa",` `,750, `Queso ahumado, guacamole, aros de cebolla, rúcula, lechuga capuchina y mostaza dulce.`);
+const mendoza = new Producto(3, "MENDOZA", "hamburguesa",` `,800, `Doble hamburguesa, doble cheddar, pepinos en pickle, cebolla, lechuga capuchina y salsa especial.`);
+const misiones = new Producto(4, "MISIONES", "hamburguesa",` `,780, `Queso azul, cebolla caramelizada, rúcula y mayonesa de berenjena.`);
+const chaco = new Producto(5, "CHACO", "hamburguesa",` `,770, `Queso danbo, tomate, lechuga capuchina, pepinos en pickle, cebolla blanca y mostaneza.`);
+const salta = new Producto(6, "SALTA", "hamburguesa",` `,800, `Doble hamburguesa, doble cheddar, pepinos en pickle, cebolla, lechuga capuchina y mayonesa de oliva.`);
+const jujuy = new Producto(7, "JUJUY", "hamburguesa",` `,750, `Queso pategrás, tomates frescos, escabeche de jalapeño y guacamole.`);
+const tucuman = new Producto(8, "TUCUMAN", "hamburguesa",` `,770, `Queso pategrás, tomates marinados, lechuga capuchina y alioli.`);
+const chubut = new Producto(9, "CHUBUT", "hamburguesa",` `,850, `Queso cheddar, panceta ahumada, pepinos en pickle y ketchup.`);
+const corrientes = new Producto(10, "CORRIENTES", "hamburguesa",` `,830, `Sánguche de pechuga de pollo frita, panceta ahumada, lechuga capuchina y tártara.`);
 // Extras
-const papasComunes = new Producto(11, "PAPAS COMUNES", "extras",` `,600, `The best friend of your burguer. The classic ones.`);
-const papasCheddar = new Producto(12, "PAPAS CHEDDAR", "extras",` `,680, `Fries with tempero, cheddar cheese, bacon & green onion.`);
-const chickenDice = new Producto(13, "CHICKEN DICES", "extras",` `,700, `Marinated chicken in 11 spices & some mayonnese.`);
-const OnionRing = new Producto(14, "ONION RINGS", "extras",` `,650, `Onion rings with some white barbacue. Or the sauce you.`);
+const papasComunes = new Producto(11, "PAPAS COMUNES", "extras",` `,600, `Clásico acompañamiento para tu hamburguesa.`);
+const papasCheddar = new Producto(12, "PAPAS CHEDDAR", "extras",` `,680, `Papas fritas con tempero,queso cheddar, panceta y cebolla de verdeo.`);
+const chickenDice = new Producto(13, "CHICKEN DICES", "extras",` `,700, `Supremas marinadas en 11 especias y mayo vieja escuela.`);
+const OnionRing = new Producto(14, "ONION RINGS", "extras",` `,650, `Acompañados con Barbacoa Blanca.`);
 // Ensaladas
-const caesar = new Producto(15, "CAESAR", "ensaladas",` `,700, `Capuccine lettuce, smoked bacon, croutones, parmesano
-cheese, chicken breast, & our special Caesar sauce.`);
-const reisol = new Producto(16, "REISOL", "ensaladas",` `,650, `Green mix, smoked cheese, cheddar cheese, boiled egg,
-guacamole, roasted tomatoes & bell pepper sauce.`);
+const caesar = new Producto(15, "CAESAR", "ensaladas",` `,700, `Lechuga capuchina, panceta ahumada, croutones, queso parmesano, pechuga de pollo y nuestro aderezo Caesar.`);
+const reisol = new Producto(16, "REISOL", "ensaladas",` `,650, `Mix de verdes, queso ahumado, queso cheddar, huevo duro, guacamole, tomates asados y salsa de morrón.`);
 // bebidas sin alcohol
 const coca = new Producto(17, "COCA", "bsalc",` `,200, `Gaseosa de 355ml marca Coca Cola.`);
 const cocaZero = new Producto(18, "COCA ZERO", "bsalc",` `,200, `Gaseosa de 355ml marca Coca Cola.`);
-const agua = new Producto(19, "AGUA", "bsalc",`C:\Users\Marco\Desktop\CoderHouse\Bompi Burguer\img\menu\agua.png`,150, `Botella de 500ml de agua mineral.`);
+const agua = new Producto(19, "AGUA", "bsalc",` `,150, `Botella de 500ml de agua mineral.`);
 const pasoToros = new Producto(20, "TOROS POMELO", "bsalc",` `,200,`Gaseosa de 355ml marca Paso de los toros.`);
 // bebidas con alcohol
 const budweis = new Producto(21, "BUDWEISER", "bcalc",` `,260, `Cerveza en lata marca Budweiser.`);
