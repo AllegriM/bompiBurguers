@@ -5,17 +5,14 @@
 // Variables
 let modalAdd = document.querySelector('.alert');
 let modalClose = document.querySelector('.close-btn')
-let windowHeight = ` ${window.screen.height / 2}px`;
-console.log(window.screen.height);
+let height = 90;
 
 for (let i = 0; i < plusBtn.length; i++) {
     const btns = plusBtn[i];
     btns.addEventListener('click', function(){
-        // modalAdd.style.top = windowHeight;
         modalAdd.classList.add('show');
         modalAdd.classList.remove('hide');
         modalAdd.classList.add('showAlert');
-        // modalAdd.style.top += '90px';
         setTimeout(function(){
             modalAdd.classList.remove("show");
             modalAdd.classList.add("hide");
@@ -25,7 +22,7 @@ for (let i = 0; i < plusBtn.length; i++) {
 
 modalClose.addEventListener('click', function() {
     modalAdd.classList.remove('show');
-    modalAdd.classList.add('hide');
+    modalAdd.classList.add('hide'); 
 })
 
 // REMOVE BUTTON

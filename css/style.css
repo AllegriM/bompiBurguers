@@ -29,6 +29,9 @@ body {
     .header .nav .nav__ul .nav__item .nav__link {
       color: #ffffff; }
 
+body {
+  overflow-x: hidden; }
+
 .header {
   height: 100%;
   width: 100%;

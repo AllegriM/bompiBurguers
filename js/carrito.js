@@ -175,7 +175,6 @@ function callEventListeners(){
         if (carrito === null) {
             alert('No hay productos en la lista')
         }else{
-            alert("Gracias por su compra!");
             e.preventDefault();
             carrito = [];
             localStorage.removeItem('cart');
@@ -183,6 +182,11 @@ function callEventListeners(){
             itemIconCart();
             addHTMLCart();
             cleanHTML();
+            swal({
+                title: "Good job!",
+                text: "You order was submitted!",
+                icon: "success",
+            });
         }
     })
 }
