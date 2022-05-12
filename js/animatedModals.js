@@ -1,5 +1,5 @@
 // MODAL ANIMATION WHEN ADD & REMOVE ITEM!
-
+let plusBtn = document.querySelectorAll('.plus')
 // ADD BUTTON
 
 // Variables

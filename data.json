@@ -1,0 +1,195 @@
+[
+    {
+        "id": 1,
+        "name": "NEUQUEN",
+        "type": "hamburguesa",
+        "img": "",
+        "price": 780,
+        "desc": "Queso ahumado, rúcula, menta, pickle de hongos de pino y mayonesa de merken."
+    },
+    {
+        "id": 2,
+        "name": "CORDOBA",
+        "type": "hamburguesa",
+        "img": "",
+        "price": 750,
+        "desc": "Queso ahumado, guacamole, aros de cebolla, rúcula, lechuga capuchina y mostaza dulce."
+    },
+    {
+        "id": 3,
+        "name": "MENDOZA",
+        "type": "hamburguesa",
+        "img": "",
+        "price": 800,
+        "desc": "Doble hamburguesa, doble cheddar, pepinos en pickle, cebolla, lechuga capuchina y salsa especial."
+    },
+    {
+        "id": 4,
+        "name": "MISIONES",
+        "type": "hamburguesa",
+        "img": "",
+        "price": 780,
+        "desc": "Queso azul, cebolla caramelizada, rúcula y mayonesa de berenjena."
+    },
+    {
+        "id": 5,
+        "name": "CHACO",
+        "type": "hamburguesa",
+        "img": "",
+        "price": 770,
+        "desc": "Queso danbo, tomate, lechuga capuchina, pepinos en pickle, cebolla blanca y mostaneza."
+    },
+    {
+        "id": 6,
+        "name": "SALTA",
+        "type": "hamburguesa",
+        "img": "",
+        "price": 800,
+        "desc": "Doble hamburguesa, doble cheddar, pepinos en pickle, cebolla, lechuga capuchina y mayonesa de oliva."
+    },
+    {
+        "id": 7,
+        "name": "JUJUY",
+        "type": "hamburguesa",
+        "img": "",
+        "price": 750,
+        "desc": "Queso pategrás, tomates frescos, escabeche de jalapeño y guacamole."
+    },
+    {
+        "id": 8,
+        "name": "TUCUMAN",
+        "type": "hamburguesa",
+        "img": "",
+        "price": 770,
+        "desc": "Queso pategrás, tomates marinados, lechuga capuchina y alioli."
+    },
+    {
+        "id": 9,
+        "name": "CHUBUT",
+        "type": "hamburguesa",
+        "img": "",
+        "price": 850,
+        "desc": "Queso cheddar, panceta ahumada, pepinos en pickle y ketchup."
+    },
+    {
+        "id": 10,
+        "name": "CORRIENTES",
+        "type": "hamburguesa",
+        "img": "",
+        "price": 830,
+        "desc": "Sánguche de pechuga de pollo frita, panceta ahumada, lechuga capuchina y tártara."
+    },
+    {
+        "id": 11,
+        "name": "PAPAS COMUNES",
+        "type": "extras",
+        "img": "",
+        "price": 600,
+        "desc": "Clásico acompañamiento para tu hamburguesa."
+    },
+    {
+        "id": 12,
+        "name": "PAPAS CHEDDAR",
+        "type": "extras",
+        "img": "",
+        "price": 680,
+        "desc": "Papas fritas con tempero,queso cheddar, panceta y cebolla de verdeo."
+    },
+    {
+        "id": 13,
+        "name": "CHICKEN DICES",
+        "type": "extras",
+        "img": "",
+        "price": 700,
+        "desc": "Supremas marinadas en 11 especias y mayo vieja escuela."
+    },
+    {
+        "id": 14,
+        "name": "CORRIENTES",
+        "type": "extras",
+        "img": "",
+        "price": 650,
+        "desc": "Acompañados con Barbacoa Blanca."
+    },
+    {
+        "id": 15,
+        "name": "CAESAR",
+        "type": "ensaladas",
+        "img": "",
+        "price": 700,
+        "desc": "Lechuga capuchina, panceta ahumada, croutones, queso parmesano, pechuga de pollo y nuestro aderezo Caesar."
+    },
+    {
+        "id": 16,
+        "name": "REISOL",
+        "type": "ensaladas",
+        "img": "",
+        "price": 650,
+        "desc": "Mix de verdes, queso ahumado, queso cheddar, huevo duro, guacamole, tomates asados y salsa de morrón."
+    },
+    {
+        "id": 17,
+        "name": "COCA",
+        "type": "bsalc",
+        "img": "",
+        "price": 200,
+        "desc": "Gaseosa de 355ml marca Coca Cola."
+    },
+    {
+        "id": 18,
+        "name": "COCA ZERO",
+        "type": "bsalc",
+        "img": "",
+        "price": 200,
+        "desc": "Gaseosa de 355ml marca Coca Cola."
+    },
+    {
+        "id": 19,
+        "name": "AGUA",
+        "type": "bsalc",
+        "img": "",
+        "price": 150,
+        "desc": "Botella de 500ml de agua mineral."
+    },
+    {
+        "id": 20,
+        "name": "TOROS POMELO",
+        "type": "bsalc",
+        "img": "",
+        "price": 200,
+        "desc": "Gaseosa de 355ml marca Paso de los toros."
+    },
+    {
+        "id": 21,
+        "name": "BUDWEISER",
+        "type": "bcalc",
+        "img": "",
+        "price": 260,
+        "desc": "Cerveza en lata marca Budweiser."
+    },
+    {
+        "id": 22,
+        "name": "HEINEKEN",
+        "type": "bcalc",
+        "img": "",
+        "price": 350,
+        "desc": "Cerveza en lata marca Heineken."
+    },
+    {
+        "id": 23,
+        "name": "CORONA",
+        "type": "bcalc",
+        "img": "",
+        "price": 260,
+        "desc": "Cerveza en lata marca Corona."
+    },
+    {
+        "id": 24,
+        "name": "BRAHMA",
+        "type": "bcalc",
+        "img": "",
+        "price": 250,
+        "desc": "Cerveza en lata marca Brahma."
+    }
+
+]
