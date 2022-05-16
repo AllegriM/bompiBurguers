@@ -21,34 +21,31 @@ for (let i = 0; i < btnFilter.length; i++) {
 
 //***********  Filter by price type *************//
 
-
-for (let i = 0; i < btnPrice.length; i++) {
-    let btnElement = btnPrice[i];
-    // Devuelve valor del atributo
-    btnElement.addEventListener('click', (e) => {
-        e.preventDefault();
-        let dataValue = e.target.dataset.value;
-        for (let i = 0; i < cardValue.length; i++) {
-            const el = cardValue[i];
-            let card = el.parentElement.parentElement.parentElement;
-            let value = el.innerText.replace("$", "");
-            if (dataValue >= value) {
-                card.style.display = "block";
-            } else {
-                card.style.display = "none";
-            }
+function filterByPrice(e) {
+    e.preventDefault();
+    let cardValue = document.querySelectorAll('.delivery_price');
+    let dataValue = e.target.dataset.value;
+    for (let i = 0; i < cardValue.length; i++) {
+        let el = cardValue[i];
+        let card = el.parentElement.parentElement.parentElement;
+        let value = el.innerText.replace("$", "");
+        if (dataValue >= value) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
         }
-    })
+    }
 }
-
 
 
 //***********  Filter by texting *************//
 
-searchBar.addEventListener('keyup', function (e) {
-    // let inputCode = e.keyCode;
-    // searchBar.innerHTML = inputCode;
-    // console.log(inputCode)
+
+
+function filterByText(e) {
+    let titlesElement = document.querySelectorAll('.menu_title');
+    let inputCode = e.keyCode;
+    searchBar.innerHTML = inputCode;
     if (e.keyCode == 13) {
         let valueSearch = searchBar.value.toUpperCase().trim();
         for (let i = 0; i < titlesElement.length; i++) {
@@ -65,5 +62,5 @@ searchBar.addEventListener('keyup', function (e) {
             }
         }
     }
-})
+}
 

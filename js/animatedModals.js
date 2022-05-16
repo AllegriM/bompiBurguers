@@ -4,20 +4,22 @@ let plusBtn = document.querySelectorAll('.plus')
 
 // Variables
 let modalAdd = document.querySelector('.alert');
-let modalClose = document.querySelector('.close-btn')
+let modalClose = document.querySelector('.close-btn');
 let height = 90;
 
-for (let i = 0; i < plusBtn.length; i++) {
-    const btns = plusBtn[i];
-    btns.addEventListener('click', function(){
-        modalAdd.classList.add('show');
-        modalAdd.classList.remove('hide');
-        modalAdd.classList.add('showAlert');
-        setTimeout(function(){
-            modalAdd.classList.remove("show");
-            modalAdd.classList.add("hide");
-        },800);
-    })
+function addModalItem() {
+    for (let i = 0; i < plusBtn.length; i++) {
+        const btns = plusBtn[i];
+        btns.addEventListener('click', function(){
+            modalAdd.classList.add('show');
+            modalAdd.classList.remove('hide');
+            modalAdd.classList.add('showAlert');
+            setTimeout(function(){
+                modalAdd.classList.remove("show");
+                modalAdd.classList.add("hide");
+            },800);
+        })
+    }
 }
 
 modalClose.addEventListener('click', function() {

@@ -1,51 +1,5 @@
 // Variables
 
-// Nav Bar
-
-let cartQty = document.querySelector('.cartQuantity');
-
-// Card Menu
-
-let addBtn = document.getElementsByClassName('plus');
-let menuList = document.getElementsByClassName('containerBurguers');
-let menuItem = document.querySelectorAll('.containerBurguers-box-item');
-let cartContainer = document.getElementsByClassName('orderCart__container');
-let plusInBtn = document.querySelectorAll('.plusliner')
-
-// Modal
-
-let submitBtn = document.querySelector('.orderCart__container_orderbtn');
-
-// Carrito 
-let cartList = document.querySelector('#cart__ul');
-let cartItem = document.getElementsByClassName('cart_item');
-let subtotal = document.querySelector('.price_subtotal');
-let total = document.querySelector('.price_total');
-let delBtn = document.querySelectorAll('.cart_item_remove');
-let qtySubmit = document.querySelector('.orderQty')
-let totalSubmit = document.querySelector('.orderCart__container_orderbtn_cont_price')
-
-let carrito = [];
-
-let itemsCart = localStorage.getItem("cart");
-
-//********** Filter by product type **********//
-
-let itemCard = document.getElementsByClassName('containerBurguers-box');
-let itemCards = document.getElementsByClassName('containerBurguers');
-let btnFilter = document.getElementsByClassName('filter_cat');
-
-//***********  Filter by texting *************//
-
-let searchBar = document.querySelector('.filter__input_title');
-let titlesElement = document.querySelectorAll('.menu_title');
-
-
-//***********  Filter by price type *************//
-
-let btnPrice = document.querySelectorAll('.filter_price');
-let cardValue = document.querySelectorAll('.delivery_price');
-
 //*********  Clases  *********//
 
 class Producto {
@@ -69,19 +23,20 @@ class Producto {
 //     .then ( (data) =>  crearProducto(data) )
 //     .then ( callEventListeners() )
 //     .catch ( (error) => console.log(error) )
-    
-getInfoProducts()
+
 async function getInfoProducts(){
     try{
         const result = await fetch ("/data.json");
         const data  = await result.json();
-        crearProducto(data)
-        callEventListeners()
+        crearProducto(data);
+        
+        callEventListeners();
     }
     catch (error){
         console.log(error);
     }
 }
+
 
 
 // Crea un producto por cada producto de data.json
@@ -120,13 +75,71 @@ function renderData(prod) {
     item.innerHTML = itemContent;
     itemsList[0].append(item);
 }
+getInfoProducts()
 
+
+// Nav Bar
+
+let cartQty = document.querySelector('.cartQuantity');
+
+// Card Menu
+
+let addBtn = document.getElementsByClassName('plus');
+let menuList = document.getElementsByClassName('containerBurguers');
+let menuItem = document.querySelectorAll('.containerBurguers-box-item');
+let cartContainer = document.getElementsByClassName('orderCart__container');
+let plusInBtn = document.querySelectorAll('.plusliner')
+
+// Modal
+
+let submitBtn = document.querySelector('.orderCart__container_orderbtn');
+
+// Carrito 
+let cartList = document.querySelector('#cart__ul');
+let cartItem = document.getElementsByClassName('cart_item');
+let subtotal = document.querySelector('.price_subtotal');
+let total = document.querySelector('.price_total');
+let delBtn = document.querySelectorAll('.cart_item_remove');
+let qtySubmit = document.querySelector('.orderQty')
+let totalSubmit = document.querySelector('.orderCart__container_orderbtn_cont_price')
+
+let carrito = [];
+
+let itemsCart = localStorage.getItem("cart");
+
+//********** Filter by product type **********//
+
+let itemCard = document.getElementsByClassName('containerBurguers-box');
+let itemCards = document.getElementsByClassName('containerBurguers');
+let btnFilter = document.getElementsByClassName('filter_cat');
+
+//***********  Filter by texting *************//
+
+let searchBar = document.querySelector('.filter__input_title');
+
+
+//***********  Filter by price type *************//
+
+let btnPrice = document.querySelectorAll('.filter_price');
 
 //*****************  Adding and removing items to Cart  ******************//
 
 // Event Listeners 
 
 function callEventListeners(){
+    
+
+
+    let cardValue = document.querySelectorAll('.delivery_price');
+
+    for (let i = 0; i < cardValue.length; i++) {
+        const singlePrice = cardValue[i];
+        singlePrice.addEventListener('click', filterByPrice);
+    }
+
+    let titlesElement = document.querySelectorAll('.menu_title');
+
+    searchBar.addEventListener('keyup', filterByText);
 
     for (let i = 0; i < addBtn.length; i++) {
         let addButton = addBtn[i];
@@ -160,6 +173,13 @@ function callEventListeners(){
             });
         }
     })
+
+    for (let i = 0; i < btnPrice.length; i++) {
+        let btnElement = btnPrice[i];
+        console.log(btnElement)
+        // Devuelve valor del atributo
+        btnElement.addEventListener('click', filterByPrice)
+    }
 }
 
 // Functions
@@ -168,9 +188,11 @@ function addProduct(e) {
     if (e.target.classList.contains('plus')){
         const productSelected = e.target.parentElement;
         getProductInfo(productSelected);
+        addModalItem();
     }else if (e.target.classList.contains('plus__liner')){
         const productSelected = e.target.parentElement.parentElement;
-        getProductInfo(productSelected);;
+        getProductInfo(productSelected);
+        addModalItem();
     }
 }
 
