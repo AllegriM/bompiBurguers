@@ -257,6 +257,7 @@ function addHTMLCart() {
     cleanHTML();
 
     carrito.forEach(product => {
+        console.log(`${(product.name).replace(" ", "_")}`)
         let row = document.createElement('li');
         row.classList.add('cart_item');
         let rowContent = `

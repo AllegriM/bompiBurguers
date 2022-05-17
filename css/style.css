@@ -189,7 +189,6 @@ body {
                   transform: rotate(90deg);
                   top: 24%; }
     .delivery__main .delivery__cards-order .filter__section {
-      width: 100%;
       max-width: 875px;
       padding: 1em;
       border: 2px solid #323232;
