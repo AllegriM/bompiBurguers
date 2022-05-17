@@ -184,6 +184,7 @@ function callEventListeners(){
 // ========================================================//
 
 function addProduct(e) {
+    let plusBtn = document.querySelectorAll('.plus')
     if (e.target.classList.contains('plus')){
         const productSelected = e.target.parentElement;
         getProductInfo(productSelected);

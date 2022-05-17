@@ -189,7 +189,8 @@ body {
                   transform: rotate(90deg);
                   top: 24%; }
     .delivery__main .delivery__cards-order .filter__section {
-      width: 200px;
+      width: 100%;
+      max-width: 875px;
       padding: 1em;
       border: 2px solid #323232;
       border-radius: 20px;
@@ -199,37 +200,37 @@ body {
         flex-direction: column; }
         .delivery__main .delivery__cards-order .filter__section .filter__container_title p {
           font-weight: 700; }
-      .delivery__main .delivery__cards-order .filter__section .filter__container_cat {
+      .delivery__main .delivery__cards-order .filter__section .filter__container .filter__dblCont .filter__container_cat {
         display: flex;
         flex-direction: column; }
-        .delivery__main .delivery__cards-order .filter__section .filter__container_cat p {
+        .delivery__main .delivery__cards-order .filter__section .filter__container .filter__dblCont .filter__container_cat p {
           font-weight: 700; }
-        .delivery__main .delivery__cards-order .filter__section .filter__container_cat a {
+        .delivery__main .delivery__cards-order .filter__section .filter__container .filter__dblCont .filter__container_cat a {
           color: black;
           text-decoration: none;
           margin-left: 5px;
           cursor: pointer; }
-          .delivery__main .delivery__cards-order .filter__section .filter__container_cat a:hover {
+          .delivery__main .delivery__cards-order .filter__section .filter__container .filter__dblCont .filter__container_cat a:hover {
             background-color: #747474;
             color: #e9d431; }
-        .delivery__main .delivery__cards-order .filter__section .filter__container_cat .active {
+        .delivery__main .delivery__cards-order .filter__section .filter__container .filter__dblCont .filter__container_cat .active {
           display: block;
           border-bottom: 2px solid #e9d431; }
-      .delivery__main .delivery__cards-order .filter__section .filter__container_price {
+      .delivery__main .delivery__cards-order .filter__section .filter__container .filter__dblCont .filter__container_price {
         display: flex;
         flex-direction: column; }
-        .delivery__main .delivery__cards-order .filter__section .filter__container_price a {
+        .delivery__main .delivery__cards-order .filter__section .filter__container .filter__dblCont .filter__container_price a {
           color: black;
           text-decoration: none;
           margin-left: 5px;
           cursor: pointer; }
-          .delivery__main .delivery__cards-order .filter__section .filter__container_price a:hover {
+          .delivery__main .delivery__cards-order .filter__section .filter__container .filter__dblCont .filter__container_price a:hover {
             background-color: #747474;
             color: #e9d431; }
-        .delivery__main .delivery__cards-order .filter__section .filter__container_price .active {
+        .delivery__main .delivery__cards-order .filter__section .filter__container .filter__dblCont .filter__container_price .active {
           display: block;
           border-bottom: 2px solid #e9d431; }
-        .delivery__main .delivery__cards-order .filter__section .filter__container_price p {
+        .delivery__main .delivery__cards-order .filter__section .filter__container .filter__dblCont .filter__container_price p {
           font-weight: 700; }
     .delivery__main .delivery__cards-order .modal-bg {
       visibility: hidden;
@@ -817,10 +818,6 @@ body {
           font-size: 1.5rem;
           color: #FFFFFF; }
 
-@media screen and (max-width: 1024px) {
-  .orders__section {
-    display: none; } }
-
 @media screen and (max-width: 768px) {
   .delivery__main .delivery__menuOptions {
     overflow-x: scroll; }
@@ -839,6 +836,32 @@ body {
     grid-template-columns: repeat(1, 1fr); }
   footer {
     margin-top: 6.25em; } }
+
+@media screen and (max-width: 1024px) {
+  .orders__section {
+    display: none; }
+  .delivery__cards-order {
+    flex-wrap: wrap; }
+  .filter__section {
+    margin-top: 1em;
+    width: 100%;
+    height: 300px; }
+  .filter__title {
+    margin: 5px 0; }
+  .filter__dblCont {
+    padding: 1em 0;
+    display: flex;
+    justify-content: space-around; }
+    .filter__dblCont .filter__container_cat {
+      display: flex;
+      flex-direction: column; }
+      .filter__dblCont .filter__container_cat > p {
+        font-weight: 900; }
+    .filter__dblCont .filter__container_price {
+      display: flex;
+      flex-direction: column; }
+      .filter__dblCont .filter__container_price > p {
+        font-weight: 900; } }
 
 @keyframes pulse-animation {
   0% {

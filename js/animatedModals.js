@@ -1,6 +1,4 @@
 // MODAL ANIMATION WHEN ADD & REMOVE ITEM!
-let plusBtn = document.querySelectorAll('.plus')
-// ADD BUTTON
 
 // Variables
 let modalAdd = document.querySelector('.alert');
@@ -8,6 +6,7 @@ let modalClose = document.querySelector('.close-btn');
 let height = 90;
 
 function addModalItem() {
+    let plusBtn = document.querySelectorAll('.plus')
     for (let i = 0; i < plusBtn.length; i++) {
         const btns = plusBtn[i];
         btns.addEventListener('click', function(){
